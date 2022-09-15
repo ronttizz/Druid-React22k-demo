@@ -1,0 +1,46 @@
+{% set person_title = label %}
+{% set person_image = content.field_druid_photo %}
+{% set person_job_title = content.field_druid_job_title %}
+{% set person_phone = content.field_druid_phone %}
+{% set person_email = content.field_druid_email %}
+{% set person_linkedin = content.field_druid_linkedin_profile %}
+{% set person_twitter = content.field_druid_twitter_account %}
+{% set person_drupal = content.field_druid_drupalorg %}
+{% set person_url = url %}
+
+<div class="person" itemscope itemtype="http://schema.org/Person">
+    {% if person_image %}
+      <div class="person__image">{{ person_image }}</div>
+    {% endif %}
+    {% if person_title %}
+      <div class="person__title" itemprop="name">{{ person_title }}</div>
+    {% endif %}
+
+    {% if person_job_title %}
+      <div class="person__job-title" itemprop="jobTitle">{{ person_job_title }}</div>
+    {% endif %}
+    {% if person_phone|render %}
+      <div class="person__phone" itemprop="telephone">{{ person_phone }}</div>
+    {% endif %}
+
+  <div class="person__social-media social-media">
+    <div class="social-media__item social-media__item--mail">
+      <a class="social-media__link social-media__link--mail" href="mailto:{{ person_email.0 }}" itemprop="email">{{ "Email"|t }} {{ person_title }}</a>
+    </div>
+    {% if person_linkedin|render %}
+    <div class="social-media__item social-media__item--linkedin">
+      <a class="social-media__link social-media__link--linkedin" href="{{ person_linkedin.0['#url'] }}">{{ "View Linkedin profile"|t }}</a>
+    </div>
+    {% endif %}
+    {% if person_twitter|render %}
+    <div class="social-media__item social-media__item--twitter">
+      <a class="social-media__link social-media__link--twitter" href="{{ person_twitter.0['#url'] }}">{{ "View Twitter profile"|t }}</a>
+    </div>
+    {% endif %}
+    {% if person_drupal|render %}
+    <div class="social-media__item social-media__item--drupal">
+      <a class="social-media__link social-media__link--drupal" href="{{ person_drupal.0['#url'] }}">{{ "View Drupal.org profile"|t }}</a>
+    </div>
+    {% endif %}
+    </div>
+</div>

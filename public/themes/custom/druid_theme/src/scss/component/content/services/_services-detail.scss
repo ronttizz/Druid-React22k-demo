@@ -1,0 +1,13 @@
+.services-detail__content {
+  margin-top: 3rem;
+  line-height: 2rem;
+
+  @include wide {
+    margin-top: 5rem;
+  }
+
+  p {
+    display: inline-block;
+    width: 100%;
+  }
+}

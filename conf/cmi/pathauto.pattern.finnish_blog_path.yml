@@ -1,0 +1,33 @@
+uuid: 0aeb9dd1-d1cc-4077-88f6-20152961f192
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: finnish_blog_path
+label: 'Finnish Blog Path'
+type: 'canonical_entities:node'
+pattern: '/blogi/[node:title]'
+selection_criteria:
+  8829d951-c6db-4e9d-99f3-ac24226f70ed:
+    id: node_type
+    negate: false
+    uuid: 8829d951-c6db-4e9d-99f3-ac24226f70ed
+    context_mapping:
+      node: node
+    bundles:
+      blog: blog
+  d3cd4e06-6277-4fc0-bee8-de325084623b:
+    id: language
+    negate: false
+    uuid: d3cd4e06-6277-4fc0-bee8-de325084623b
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

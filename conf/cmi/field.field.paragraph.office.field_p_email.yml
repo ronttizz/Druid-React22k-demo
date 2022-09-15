@@ -1,0 +1,19 @@
+uuid: f8e0842a-bdeb-4202-83a6-d419944d995c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_email
+    - paragraphs.paragraphs_type.office
+id: paragraph.office.field_p_email
+field_name: field_p_email
+entity_type: paragraph
+bundle: office
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

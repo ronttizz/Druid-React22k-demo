@@ -1,0 +1,17 @@
+uuid: a3a4cc05-6c34-4b1c-ae00-a0fe7b4cfd59
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Reference logos'
+type: reference_logos
+description: 'Reference logos, which are used on the reference page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

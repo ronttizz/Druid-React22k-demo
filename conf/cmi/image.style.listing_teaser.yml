@@ -1,0 +1,25 @@
+uuid: 49ebfc50-c9de-4341-8829-007bb9ffe83a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: listing_teaser
+label: 'Listing teaser reference'
+effects:
+  3f2bb1c1-2671-4050-a9c3-693b648b8610:
+    uuid: 3f2bb1c1-2671-4050-a9c3-693b648b8610
+    id: image_scale
+    weight: -10
+    data:
+      width: 840
+      height: null
+      upscale: false
+  248d9bae-0663-4381-ac57-daea86ad83e7:
+    uuid: 248d9bae-0663-4381-ac57-daea86ad83e7
+    id: focal_point_scale_and_crop
+    weight: 3
+    data:
+      width: 840
+      height: 550
+      crop_type: focal_point

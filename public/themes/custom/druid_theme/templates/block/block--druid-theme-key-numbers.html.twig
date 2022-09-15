@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override for a key numbers view.
+ */
+#}
+{% set title = content['#view'].getTitle() %}
+{% set items = content['#view'].result %}
+{% set langcode = langcode %}
+
+
+<div class="key-numbers l-container l-container--inset">
+  <div class="key-numbers__container">
+    {% if title %}
+      <div class="key-numbers__header">
+        <h2 class="key-numbers__title">{{ title }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="key-numbers__content">
+      {% for item in items %}
+
+      {% set number = item._entity.get('field_key_number').getValue()[0]['value'] %}
+      {% set name = item._entity.getTranslation(langcode).getName() %}
+      {% set extra = item._entity.get('field_key_extra').getValue()[0]['value'] %}
+
+        <div class="key-number">
+          <div class="key-number__inner">
+            <div class="key-number__value">{{ number }}{% if extra %}<span class="key-number__extra">{{ extra }}</span>{% endif %}
+            </div>
+            <div class="key-number__name">
+              {{ name }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

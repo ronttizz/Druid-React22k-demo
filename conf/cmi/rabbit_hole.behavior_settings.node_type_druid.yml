@@ -1,0 +1,14 @@
+uuid: cf77ef79-ac82-45ee-82d6-c90780404ea9
+langcode: fi
+status: true
+dependencies:
+  config:
+    - node.type.druid
+id: node_type_druid
+entity_type_id: node_type
+entity_id: druid
+action: page_redirect
+allow_override: 1
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied

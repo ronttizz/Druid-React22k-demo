@@ -1,0 +1,19 @@
+uuid: 57c8828f-d87f-448e-ac00-c81973790e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_customer_name
+    - node.type.references
+id: node.references.field_reference_customer_name
+field_name: field_reference_customer_name
+entity_type: node
+bundle: references
+label: 'Customer name'
+description: 'Name of the customer providing the quote for the reference page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

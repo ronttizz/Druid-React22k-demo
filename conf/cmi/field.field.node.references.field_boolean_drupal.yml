@@ -1,0 +1,23 @@
+uuid: d52041e6-f435-43d9-b8d4-b08d3d17f6ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_boolean_drupal
+    - node.type.references
+id: node.references.field_boolean_drupal
+field_name: field_boolean_drupal
+entity_type: node
+bundle: references
+label: Drupal
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

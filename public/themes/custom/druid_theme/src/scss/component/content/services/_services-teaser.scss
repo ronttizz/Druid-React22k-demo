@@ -1,0 +1,57 @@
+.services {
+  &:not(:first-child) {
+    margin-top: 3rem;
+
+    @include small {
+      margin-top: 5rem;
+    }
+
+    @include medium {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.services .l-container--content {
+  margin: 1rem auto;
+}
+
+.services__link {
+  text-decoration: none;
+  color: $black;
+  display: block;
+
+  @include medium-wide {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.services__icon {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+
+  @include medium-wide {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+}
+
+.services__text {
+  @include medium-wide {
+    order: 1;
+    width: 80%;
+  }
+}
+
+.services__body {
+  margin-bottom: 2rem;
+}

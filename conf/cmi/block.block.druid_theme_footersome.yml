@@ -1,0 +1,25 @@
+uuid: c64ab4b3-aa4d-4a86-b707-f2eee2ee2996
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d2946df9-04bb-44be-8900-0c515740eb3f'
+  module:
+    - block_content
+  theme:
+    - druid_theme
+id: druid_theme_footersome
+theme: druid_theme
+region: footer_middle
+weight: -7
+provider: null
+plugin: 'block_content:d2946df9-04bb-44be-8900-0c515740eb3f'
+settings:
+  id: 'block_content:d2946df9-04bb-44be-8900-0c515740eb3f'
+  label: 'Footer some'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

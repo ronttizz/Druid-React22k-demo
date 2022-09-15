@@ -1,0 +1,23 @@
+.key-numbers {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+
+  @include wide {
+    margin-top: 4rem;
+  }
+}
+
+.key-numbers__header {
+  margin-bottom: 3rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.key-numbers__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -1rem;
+}

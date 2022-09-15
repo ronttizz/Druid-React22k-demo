@@ -1,0 +1,64 @@
+// .blog-teaser {
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 2rem;
+
+//   @include small {
+//     margin-bottom: 3rem;
+//   }
+
+//   @include wide {
+//     margin-bottom: 4rem;
+//   }
+// }
+
+// .blog-teaser__link {
+//   color: $black;
+//   text-decoration: none;
+// }
+
+// .blog-teaser__image {
+//   margin-bottom: 1.5rem;
+
+//   img {
+//     width: 100%;
+//   }
+// }
+
+// .blog-teaser__title {
+//   @include font-size(18px);
+//   font-weight: 600;
+
+//   @include small {
+//     @include font-size(20px);
+//   }
+
+//   @include medium {
+//     @include font-size(24px);
+//   }
+
+//   @include medium-wide {
+//     @include font-size(28px);
+//   }
+// }
+
+// .blog-teaser__date-author {
+//   margin-bottom: 0.25rem;
+// }
+
+// .blog-teaser__body {
+//   @include font-size(14px);
+//   margin-bottom: 1.25rem;
+
+//   p:last-of-type {
+//     margin-bottom: 0;
+//   }
+
+//   @include small {
+//     @include font-size(16px);
+//   }
+
+//   @include medium {
+//     @include font-size(18px);
+//   }
+// }

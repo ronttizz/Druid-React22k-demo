@@ -1,0 +1,21 @@
+.offices__item {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+
+    @include medium-small {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include wide {
+    width: calc(100% / 2 - 0.5rem);
+  }
+}
+
+.offices__items {
+  @include wide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,70 @@
+uuid: 5aca7a18-c87e-417c-8b6d-b01ce9647dda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.office.field_p_address
+    - field.field.paragraph.office.field_p_email
+    - field.field.paragraph.office.field_p_image
+    - field.field.paragraph.office.field_p_location
+    - field.field.paragraph.office.field_p_phone
+    - image.style.medium
+    - paragraphs.paragraphs_type.office
+  module:
+    - address
+    - focal_point
+id: paragraph.office.default
+targetEntityType: paragraph
+bundle: office
+mode: default
+content:
+  field_p_address:
+    type: address_default
+    weight: 2
+    region: content
+    settings:
+      default_country: null
+    third_party_settings: {  }
+  field_p_email:
+    type: email_default
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_p_image:
+    type: image_focal_point
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  field_p_location:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_p_phone:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

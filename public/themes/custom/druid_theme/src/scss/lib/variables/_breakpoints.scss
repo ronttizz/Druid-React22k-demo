@@ -1,0 +1,11 @@
+$small: 30em; //480px
+$medium-small: 37.5em; //600px
+$medium: 40em; //640px
+$medium-wide: 48em; //768px
+$wide: 60em; //960px
+$extrawide: 75em; //1200px
+
+// Adjust value of container
+$container: calc(75em / 1.125); // Because body font-size = 1.125rem and breakpoints are em defined
+
+$max-width-deduction: 0.0625em;

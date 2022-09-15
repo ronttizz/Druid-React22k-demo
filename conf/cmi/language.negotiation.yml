@@ -1,0 +1,13 @@
+langcode: fi
+session:
+  parameter: language
+url:
+  source: path_prefix
+  prefixes:
+    en: en
+    fi: ''
+    '': null
+  domains:
+    en: ''
+    fi: ''
+selected_langcode: fi

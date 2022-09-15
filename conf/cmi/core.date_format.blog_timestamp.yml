@@ -1,0 +1,8 @@
+uuid: 15ac40db-6abf-423a-aa00-faa4e8a4976a
+langcode: fi
+status: true
+dependencies: {  }
+id: blog_timestamp
+label: 'Blog timestamp'
+locked: false
+pattern: 'd.m.Y - H:i'

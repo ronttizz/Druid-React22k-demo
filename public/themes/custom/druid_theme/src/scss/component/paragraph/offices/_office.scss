@@ -1,0 +1,63 @@
+.office__location {
+  margin-bottom: 2rem;
+}
+
+.office__content {
+  @include medium-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.office__image {
+  margin-bottom: 2rem;
+
+  @include medium-small {
+    margin-bottom: 0;
+    width: calc(100% / 2 - 1rem);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.office__info {
+  @include medium-small {
+    width: calc(100% / 2 - 1rem);
+  }
+}
+
+.office__address .address,
+.office__phone,
+.office__email {
+  @include font-size(20px);
+
+  @include small {
+    @include font-size(24px);
+  }
+
+  @include medium-small {
+    @include font-size(20px);
+  }
+
+  @include medium {
+    @include font-size(22px);
+  }
+
+  @include medium-wide {
+    @include font-size(24px);
+  }
+
+  @include wide {
+    @include font-size(20px);
+  }
+}
+
+.office__email {
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}

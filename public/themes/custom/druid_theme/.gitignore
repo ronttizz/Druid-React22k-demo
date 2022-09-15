@@ -1,0 +1,15 @@
+# Theme related ignores
+composer.lock
+composer.json
+
+# Ignore sass-cache files.
+*.sass-cache*
+
+# Node and npm
+node_modules
+npm-debug.log
+.gulp
+
+# Else
+*.css.map
+.DS_Store

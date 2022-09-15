@@ -1,0 +1,31 @@
+.main-menu {
+  display: none;
+
+  @include wide {
+    display: flex;
+  }
+}
+
+.main-menu__item {
+  &:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+}
+
+.main-menu__link {
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba($black,.7);
+  color: $white;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    text-shadow: none;
+  }
+
+  &.is-active {
+    color: $primary-color;
+    text-shadow: none;
+  }
+}

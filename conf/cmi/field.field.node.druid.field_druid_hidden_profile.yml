@@ -1,0 +1,23 @@
+uuid: 4e17f1cf-deb5-4c76-aa7f-e9df27b8f4fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_hidden_profile
+    - node.type.druid
+id: node.druid.field_druid_hidden_profile
+field_name: field_druid_hidden_profile
+entity_type: node
+bundle: druid
+label: 'Hidden profile'
+description: 'Hide profile from people listing'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Hidden profile'
+  off_label: 'off'
+field_type: boolean

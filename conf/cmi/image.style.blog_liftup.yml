@@ -1,0 +1,17 @@
+uuid: 6d739d1a-dd11-4cc5-ad01-01265215c72f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_liftup
+label: 'Blog liftup'
+effects:
+  a5347d2e-263e-4ce6-9ec9-017263964843:
+    uuid: a5347d2e-263e-4ce6-9ec9-017263964843
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 700
+      height: 700
+      crop_type: focal_point

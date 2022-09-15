@@ -1,0 +1,48 @@
+.overlay-menu {
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    @include font-size(20px);
+    color: $white;
+    display: block;
+    font-family: $base-font-family;
+    padding: 1rem ($gutter * 1.5);
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+
+    &.is-active:hover,
+    &.is-active:focus,
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+
+    &.is-active {
+      color: $red;
+    }
+
+    @include small {
+      @include font-size(22px);
+    }
+
+    @include medium {
+      @include font-size(26px);
+    }
+  }
+
+  & & {
+    margin: 0;
+
+    .overlay-menu__item {
+      margin-top: 0;
+    }
+
+    .overlay-menu__link {
+      font-size: 1.5rem;
+      text-transform: none;
+    }
+  }
+}

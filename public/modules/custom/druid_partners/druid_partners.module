@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations and shared functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function druid_partners_theme() {
+  $theme = [
+    'druid_partners_block' => [
+      'variables' => [
+        'module_path' => NULL,
+      ],
+    ],
+  ];
+  return $theme;
+}

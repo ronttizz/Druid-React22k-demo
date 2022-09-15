@@ -1,0 +1,5 @@
+name: Druid Partners Block
+description: Provides partners block for footer
+package: Custom
+type: module
+core_version_requirement: ^9 || ^10

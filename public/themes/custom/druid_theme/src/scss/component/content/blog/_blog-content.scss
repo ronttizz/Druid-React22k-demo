@@ -1,0 +1,157 @@
+.blog-detail {
+  .hero {
+    padding-bottom: 75px;
+
+    @include medium-wide {
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.blog-detail__item--with-border {
+  border-top: 1px solid $gray;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.blog-detail__content {
+  padding: 4rem 0 2rem;
+  position: relative;
+
+  @include small {
+    padding: 4.5rem 0 4rem;
+  }
+
+  @include medium-wide {
+    padding-top: 6.5rem;
+  }
+
+  @include wide {
+    padding-bottom: 5rem;
+  }
+
+  h2,
+  strong {
+    font-weight: 600;
+  }
+}
+
+.blog-detail__content--no-author {
+  padding-top: 3rem;
+
+  @include medium {
+    padding-top: 3.5rem;
+  }
+
+  @include medium-wide {
+    padding-top: 5rem;
+  }
+}
+
+.blog-detail__text {
+  position: relative;
+
+  .l-container--inset {
+    @include medium-wide {
+      padding: 0 3rem;
+    }
+
+    @media screen and (min-width: 1300px) {
+      padding: 0 1.5rem;
+    }
+  }
+}
+
+.blog-detail__add-comment {
+  .links {
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    white-space: nowrap;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      padding: 0 5px;
+      position: relative;
+
+      &::before {
+        background: $red;
+        content: '';
+        display: block;
+        height: 18px;
+        left: -3px;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        width: 2px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      background-color: $red;
+      border-radius: 0.2rem;
+      color: $white;
+      display: block;
+      padding: 0.25rem 0.75rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: darken($red, 10);
+      }
+    }
+  }
+}
+
+.blog-detail__cta {
+  .blog-cta {
+    margin: 0 -1rem;
+    text-align: center;
+
+    @include medium-small {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  .blog-cta__item {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .blog-cta--has-sales {
+    .blog-cta__item {
+      @include medium-small {
+        width: 50%;
+      }
+    }
+  }
+
+  .block--cta {
+    margin: 0;
+  }
+
+  @media screen and (max-width: $wide - $max-width-deduction) {
+    .contact-person-listing {
+      display: block;
+
+      .person {
+        max-width: 100%;
+      }
+    }
+  }
+}

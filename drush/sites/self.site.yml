@@ -1,0 +1,7 @@
+prod:
+  host: node-188e8ba6-9790-44de-87d7-1cc2a9166761.wod.by
+  user: wodby
+  root: /var/www/html/public
+  uri: old.druid.fi
+  ssh:
+    options: '-p 31228 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'

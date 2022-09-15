@@ -1,0 +1,10 @@
+langcode: fi
+first_day: 1
+country:
+  default: FI
+timezone:
+  default: Europe/Helsinki
+  user:
+    configurable: true
+    default: 0
+    warn: false

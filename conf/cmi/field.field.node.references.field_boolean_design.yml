@@ -1,0 +1,23 @@
+uuid: 2ed36f59-6767-42d6-a173-091910af20ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_boolean_design
+    - node.type.references
+id: node.references.field_boolean_design
+field_name: field_boolean_design
+entity_type: node
+bundle: references
+label: Design
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

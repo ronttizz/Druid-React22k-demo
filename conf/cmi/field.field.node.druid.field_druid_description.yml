@@ -1,0 +1,21 @@
+uuid: 78ee9556-9cd3-446b-b600-e785ea19f448
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_description
+    - node.type.druid
+  module:
+    - text
+id: node.druid.field_druid_description
+field_name: field_druid_description
+entity_type: node
+bundle: druid
+label: 'Short description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

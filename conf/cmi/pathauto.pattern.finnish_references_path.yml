@@ -1,0 +1,33 @@
+uuid: 123ff8ff-466e-42fe-9b4e-d45a47e30578
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: finnish_references_path
+label: 'Finnish References Path'
+type: 'canonical_entities:node'
+pattern: '/referenssit/[node:title]'
+selection_criteria:
+  a2204b2b-ef80-474b-bcaa-cd04baaa018f:
+    id: node_type
+    negate: false
+    uuid: a2204b2b-ef80-474b-bcaa-cd04baaa018f
+    context_mapping:
+      node: node
+    bundles:
+      references: references
+  91172b76-c226-4fa6-b030-ac05817c422a:
+    id: language
+    negate: false
+    uuid: 91172b76-c226-4fa6-b030-ac05817c422a
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,18 @@
+uuid: f4e347f2-c643-4442-9000-f1211eb67209
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reference_logos
+id: node.reference_logos.changed
+field_name: changed
+entity_type: node
+bundle: reference_logos
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,19 @@
+uuid: bbeae962-ba8f-45b6-a700-0c099a44eb42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_phone
+    - node.type.druid
+id: node.druid.field_druid_phone
+field_name: field_druid_phone
+entity_type: node
+bundle: druid
+label: Phone
+description: 'Start with +358 ...'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

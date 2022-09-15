@@ -1,0 +1,15 @@
+uuid: 2b5ece0d-124a-46c4-9d3e-629f460190ea
+langcode: en
+status: true
+dependencies: {  }
+name: header_large
+label: 'Header large'
+effects:
+  d903185c-e74d-427c-ae00-b280d1aa1bff:
+    uuid: d903185c-e74d-427c-ae00-b280d1aa1bff
+    id: image_scale
+    weight: 1
+    data:
+      width: 1800
+      height: null
+      upscale: false

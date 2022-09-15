@@ -1,0 +1,38 @@
+{% set office_location = content.field_p_location %}
+{% set office_image = content.field_p_image %}
+{% set office_address = content.field_p_address %}
+{% set office_email = content.field_p_email %}
+{% set office_phone = content.field_p_phone %}
+
+<div class="office">
+  {% if office_location %}
+    <h2 class="office__location">{{ office_location }}</h2>
+  {% endif %}
+
+  <div class="office__content">
+    {% if office_image|render %}
+      <div class="office__image">
+        {{ office_image }}
+      </div>
+    {% endif %}
+    <div class="office__info">
+      {% if office_address or office_email or office_phone %}
+        {% if office_address %}    
+          <div class="office__address">
+            {{ office_address }}
+          </div>
+        {% endif %}
+        {% if office_phone %}    
+          <div class="office__phone">
+            {{ office_phone }}
+          </div>
+        {% endif %}
+        {% if office_email %}    
+          <div class="office__email">
+            {{ office_email }}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>

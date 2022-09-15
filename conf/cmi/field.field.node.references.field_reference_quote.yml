@@ -1,0 +1,19 @@
+uuid: 21f07799-c77f-45e6-b600-f31c63840f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_quote
+    - node.type.references
+id: node.references.field_reference_quote
+field_name: field_reference_quote
+entity_type: node
+bundle: references
+label: 'Customer quote'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

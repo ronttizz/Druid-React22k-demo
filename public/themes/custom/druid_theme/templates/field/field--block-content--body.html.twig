@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+
+<div class="main-content l-container">
+  <div class="main-content__container">
+    {% if title %}
+      <h1>{{ title }}</h1>
+    {% endif %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,33 @@
+uuid: 2d6c04ff-f0b0-41d6-87cf-e1fab0cbbc46
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2fcc8fbf-234a-4300-9cd7-da9c2f7d63c4'
+  module:
+    - block_content
+    - node
+  theme:
+    - druid_theme
+id: druid_theme_ctatextbutton
+theme: druid_theme
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:2fcc8fbf-234a-4300-9cd7-da9c2f7d63c4'
+settings:
+  id: 'block_content:2fcc8fbf-234a-4300-9cd7-da9c2f7d63c4'
+  label: 'CTA text + button'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      services: services

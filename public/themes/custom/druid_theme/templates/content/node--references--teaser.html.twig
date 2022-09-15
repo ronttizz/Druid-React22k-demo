@@ -1,0 +1,34 @@
+{% set listing_title = label %}
+{% set listing_image = content.field_reference_laptop %}
+{% set listing_text = content.body|render|striptags %}
+{% set listing_link = url %}
+
+<div class="listing__item listing-item listing-item--reference">
+  <a href="{{ listing_link }}" class="listing-item__link">
+    {% if listing_image|render %}
+      <div class="listing-item__image">{{ listing_image }}</div>
+    {% endif %}
+    <div class="listing-item__text">
+      <h2 class="listing-item__title">{{ listing_title }}</h2>
+      {% if listing_text|render %}
+        <div class="listing-item__body">{{ listing_text }}</div>
+      {% endif %}
+    </div>
+    <div class="listing-item__bottom">
+      <div class=" listing-item__technologies reference-technologies">
+        <div class="reference-technologies__type reference-technologies__type--design{% if node.field_boolean_design.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/design-icon.html.twig' %}
+          <span class="reference-technologies__type-name">Design</span>
+        </div>
+        <div class="reference-technologies__type reference-technologies__type--react{% if node.field_boolean_react.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/react-icon.html.twig' %}
+          <span class="reference-technologies__type-name">React</span>
+        </div>
+        <div class="reference-technologies__type reference-technologies__type--drupal{% if node.field_boolean_drupal.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/drupal-icon.html.twig' %}
+          <span class="reference-technologies__type-name">Drupal</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

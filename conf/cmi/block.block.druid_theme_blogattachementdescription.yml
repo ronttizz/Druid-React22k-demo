@@ -1,0 +1,31 @@
+uuid: 2921d698-3263-4b24-9b5f-9fd64ef4f1e9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f577f4c2-32ed-43be-892d-45d18820d4b9'
+  module:
+    - block_content
+    - system
+  theme:
+    - druid_theme
+id: druid_theme_blogattachementdescription
+theme: druid_theme
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:f577f4c2-32ed-43be-892d-45d18820d4b9'
+settings:
+  id: 'block_content:f577f4c2-32ed-43be-892d-45d18820d4b9'
+  label: 'Blog attachement - description'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '*'

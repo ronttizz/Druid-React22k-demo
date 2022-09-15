@@ -1,0 +1,10 @@
+uuid: ad6fb23a-c63c-4a5d-b70d-00000554e81f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.person_contact
+label: 'Person Contact'
+targetEntityType: node
+cache: true

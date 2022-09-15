@@ -1,0 +1,38 @@
+//
+// @file
+// This file includes all mixins related to the typography
+//
+
+@mixin fontsmoothing($smooting: antialiased, $uses-text-shadow: false) {
+  -webkit-font-smoothing: $smooting;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: $smooting;
+  -ms-font-smoothing: $smooting;
+  font-smoothing: $smooting;
+
+  @if $uses-text-shadow {
+    text-shadow: $text-shadow-light;
+  }
+}
+
+@mixin font-size($font-size, $desired-mobile-size: '') {
+  // @include mobile {
+  @media screen and (max-width: $medium-wide - $max-width-deduction) {
+    @if $desired-mobile-size != '' {
+      font-size: calc($desired-mobile-size / $base-font-size) * 1rem;
+    }
+  }
+  font-size: calc($font-size / $base-font-size) * 1rem;
+}
+
+@mixin font-awesome($unicode: '') {
+  @if ($unicode) {
+    content: $unicode;
+  }
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

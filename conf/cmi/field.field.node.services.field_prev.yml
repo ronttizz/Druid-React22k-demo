@@ -1,0 +1,28 @@
+uuid: 341913b8-5bbb-4e75-9186-1c8660fc522b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prev
+    - node.type.services
+id: node.services.field_prev
+field_name: field_prev
+entity_type: node
+bundle: services
+label: Previous
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: created
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

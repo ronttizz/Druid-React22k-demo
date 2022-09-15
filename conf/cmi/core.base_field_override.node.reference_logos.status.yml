@@ -1,0 +1,22 @@
+uuid: 5c579d10-2cd3-411d-b200-d9c2478f8448
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reference_logos
+id: node.reference_logos.status
+field_name: status
+entity_type: node
+bundle: reference_logos
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

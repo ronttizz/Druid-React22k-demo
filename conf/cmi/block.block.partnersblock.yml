@@ -1,0 +1,20 @@
+uuid: c2eacc7f-7769-422d-8fd2-529353dea450
+langcode: en
+status: true
+dependencies:
+  module:
+    - druid_partners
+  theme:
+    - druid_theme
+id: partnersblock
+theme: druid_theme
+region: footer_right
+weight: 0
+provider: null
+plugin: id_partners_block
+settings:
+  id: id_partners_block
+  label: 'Partners block'
+  label_display: '0'
+  provider: druid_partners
+visibility: {  }

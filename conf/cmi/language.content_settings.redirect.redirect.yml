@@ -1,0 +1,11 @@
+uuid: 98753b08-ff46-4c67-b600-b4086d1d0995
+langcode: fi
+status: true
+dependencies:
+  module:
+    - redirect
+id: redirect.redirect
+target_entity_type_id: redirect
+target_bundle: redirect
+default_langcode: fi
+language_alterable: true

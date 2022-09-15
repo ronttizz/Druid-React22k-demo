@@ -1,0 +1,169 @@
+.content-promotion-reference {
+  margin: 0 auto;
+  padding: .5rem .25rem;
+  position: relative;
+
+  @include extrawide {
+    padding: .5rem 3rem;
+  }
+
+  @media screen and (min-width: 1300px) {
+    padding: .5rem 4rem;
+  }
+}
+
+.content-promotion-reference__link {
+  border: 1px solid $gray-lighter;
+  text-decoration: none;
+  color: $black;
+  display: flex;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 0 rgba($black, .2);
+    background: $gray-light;
+    color: $black;
+
+    .button {
+      background-color: $red;
+      color: $white;
+      border: 2px solid transparent;
+    }
+  }
+
+  &:focus {
+    .content-promotion-reference__title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content-promotion-reference__image {
+  display: none;
+
+  @include medium-wide {
+    flex: 1 0 auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 35%;
+  }
+
+  @include extrawide {
+    width: 50%;
+  }
+
+  &::before {
+    @include extrawide {
+      content: '';
+      float: left;
+      padding-top: 100%;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+.content-promotion-reference__text {
+  padding: 2rem;
+  flex-grow: 1;
+
+  @include small {
+    padding: 3rem;
+  }
+
+  @include medium-small {
+    padding: 2rem 3rem;
+  }
+
+  @include extrawide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    padding-bottom: 7.5rem;
+  }
+}
+
+.content-promotion-reference__image-logo {
+  width: 150px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  @include small {
+    width: 170px;
+    margin-bottom: 2.5rem;
+  }
+
+  @include medium {
+    margin-bottom: 3rem;
+  }
+
+  @include wide {
+    width: 150px;
+  }
+
+  @include extrawide {
+    width: 160px;
+  }
+}
+
+.content-promotion-reference__quote {
+  @include font-size(14px);
+  margin-bottom: 1rem;
+  min-height: 400px;
+
+  @include small {
+    @include font-size(15px);
+    margin-bottom: 1.5rem;
+    min-height: 300px;
+  }
+
+  @include medium-small {
+    @include font-size(16px);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+
+  @include medium {
+    @include font-size(17px);
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 1020px) {
+    @include font-size(16px);
+  }
+
+  @media screen and (min-width: 1050px) {
+    @include font-size(17px);
+  }
+
+  @include extrawide {
+    @include font-size(18px);
+    min-height: none;
+  }
+}
+
+.content-promotion-reference__summary {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.content-promotion-reference__button {
+  margin-top: 2rem;
+
+  @include extrawide {
+    bottom: 2rem;
+    left: 3rem;
+    position: absolute;
+    margin-top: 0;
+  }
+}

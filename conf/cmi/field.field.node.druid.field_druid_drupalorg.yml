@@ -1,0 +1,23 @@
+uuid: 8e614211-d28c-4101-a200-b0d6b773d3c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_drupalorg
+    - node.type.druid
+  module:
+    - link
+id: node.druid.field_druid_drupalorg
+field_name: field_druid_drupalorg
+entity_type: node
+bundle: druid
+label: 'Drupal.org profile'
+description: 'Add full URL, but only handler to link text'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link

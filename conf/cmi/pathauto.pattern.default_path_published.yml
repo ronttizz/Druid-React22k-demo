@@ -1,0 +1,25 @@
+uuid: f3c7af61-8ac1-44f4-9500-c60204992975
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: default_path_published
+label: 'Default path (blog/druid/references/services)'
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:title]'
+selection_criteria:
+  66172ab8-08de-450e-ba61-51067c277a41:
+    id: node_type
+    negate: false
+    uuid: 66172ab8-08de-450e-ba61-51067c277a41
+    context_mapping:
+      node: node
+    bundles:
+      blog: blog
+      druid: druid
+      references: references
+      services: services
+selection_logic: and
+weight: -5
+relationships: {  }

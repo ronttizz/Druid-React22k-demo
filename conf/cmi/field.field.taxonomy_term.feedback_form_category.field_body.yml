@@ -1,0 +1,21 @@
+uuid: 6552021b-b798-40e0-a2b4-e6401ecec00a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_body
+    - taxonomy.vocabulary.feedback_form_category
+  module:
+    - text
+id: taxonomy_term.feedback_form_category.field_body
+field_name: field_body
+entity_type: taxonomy_term
+bundle: feedback_form_category
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

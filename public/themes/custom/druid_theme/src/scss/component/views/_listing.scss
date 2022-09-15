@@ -1,0 +1,99 @@
+.listing__wrapper {
+  margin-bottom: 2rem;
+}
+
+.listing__content {
+  margin: 3rem -1.5rem 0;
+
+  @include medium-wide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include wide {
+    margin-top: 4rem;
+  }
+}
+
+.listing-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+
+  @include medium-wide {
+    width: 50%;
+  }
+}
+
+.listing-item__link {
+  border: 1px solid $gray-lighter;
+  display: block;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  color: $body-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 0 rgba($black, .2);
+    background: $gray-light;
+  }
+
+  &:focus {
+    .listing-item__title {
+      text-decoration: underline;
+    }
+  }
+
+  .listing-item__image {
+    margin: -1px;
+  }
+
+  .listing-item__body {
+    @include breakpoint(max-width $medium-wide) {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+}
+
+.listing-item__date-author {
+  margin-bottom: .5rem;
+}
+
+.listing-item__title {
+  font-size: 1.375rem;
+
+  @include medium-small {
+    font-size: 1.5rem;
+  }
+
+  @include wide {
+    font-size: 1.75rem;
+  }
+}
+
+.listing-item__text {
+  padding: 1.5rem;
+}
+
+.listing-item__bottom {
+  padding: 0 1rem;
+}
+
+// Reference specific
+.listing-item--reference {
+  .listing-item__link {
+    position: relative;
+    padding-bottom: 4.5rem;
+  }
+
+  .listing-item__bottom {
+    bottom: 1.5rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}

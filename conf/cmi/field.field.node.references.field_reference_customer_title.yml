@@ -1,0 +1,19 @@
+uuid: fdd79caf-bbad-4359-8e00-e64b94c112b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_customer_title
+    - node.type.references
+id: node.references.field_reference_customer_title
+field_name: field_reference_customer_title
+entity_type: node
+bundle: references
+label: 'Customer title'
+description: 'Official title of the customer providing the quote for the reference page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

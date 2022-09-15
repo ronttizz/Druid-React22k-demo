@@ -1,0 +1,17 @@
+uuid: 317a0f12-beaa-4847-b7d7-55b794ea0736
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_large_huge
+label: 'Hero large-huge (1500x838)'
+effects:
+  64577bd8-7c2c-40f6-9c20-3ea20c8ec7ff:
+    uuid: 64577bd8-7c2c-40f6-9c20-3ea20c8ec7ff
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1500
+      height: 838
+      crop_type: focal_point

@@ -1,0 +1,8 @@
+uuid: d628530d-5254-4c8a-bc00-a421f4d3b0a8
+langcode: en
+status: true
+dependencies: {  }
+id: main-footer-menu
+label: 'Main footer menu'
+description: 'Main menu in the footer'
+locked: false

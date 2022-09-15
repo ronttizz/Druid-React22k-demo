@@ -1,0 +1,29 @@
+{% set listing_title = label %}
+{% set listing_image = content.field_header_background %}
+{% set listing_category = content.field_blog_category %}
+{% set listing_text = content.body|render|striptags %}
+{% set listing_author = content.field_author %}
+{% set listing_link = url %}
+{% set listing_date = date %}
+
+<div class="listing__item listing__item--blog listing-item">
+  <a href="{{ listing_link }}" class="listing-item__link">
+    {% if listing_image|render %}
+      <div class="listing-item__image">{{ listing_image }}</div>
+    {% endif %}
+    <div class="listing-item__text">
+      <div class="listing-item__date-author date-author">
+        <div class="date-author__date">{{ listing_date }}</div>
+        {% if listing_author|render %}
+          <div class="separator">|</div>
+          <div class="date-author__author">{{ listing_author }}</div>
+        {% endif %}
+      </div>
+      <h2 class="listing-item__title">{{ listing_title }}</h2>
+      {% if listing_text|render %}
+        <div class="listing-item__body">{{ listing_text }}</div>
+      {% endif %}
+    </div>
+  </a>
+</div>
+

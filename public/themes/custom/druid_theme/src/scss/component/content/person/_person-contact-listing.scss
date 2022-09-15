@@ -1,0 +1,37 @@
+.contact-person-listing {
+  margin: 0 (-$gutter);
+
+  @media screen and (min-width: $medium-small) and (max-width: $wide - $max-width-deduction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+// PERSON on Contact page
+.person--contact {
+  @include wide {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.person__phone--contact {
+  margin: 0;
+}
+
+.person__image--contact {
+  @include wide {
+    margin: 0 2rem 0 0;
+    width: 8rem;
+  }
+}
+
+.person__info {
+  @include wide {
+    text-align: left;
+  }
+}

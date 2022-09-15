@@ -1,0 +1,50 @@
+{% set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.bundle|clean_class ~ '-detail',
+] %}
+
+{% set hero_title = node.get('title').getString() %}
+{% set hero_text = hero_text %}
+{% set hero_icon = content.field_service_icon %}
+{% set body_summary = content.body['#object'].body.summary %}
+{% set druid = content.field_druid %}
+
+{% if content.body['#object'].body.summary is not empty %}
+  {% set title = node.get('title').getString() %}
+{% endif %}
+
+{{ attach_library('druid_theme/references') }}
+
+<article{{ attributes.addClass(classes) }}>
+  {% if body_summary is not empty or druid is not empty %}
+    {% set hero_text %}
+      {% if body_summary is not empty %}
+        <div class="hero__text--text">
+          {{ body_summary }}        
+        </div>
+      {% endif %}
+      {% if druid %}
+        <div class="hero__person">{{ druid }}</div>
+      {% endif %}
+    {% endset %}
+
+    <div class="hero">
+      <div class="hero__content hero__content--spacing">
+        {% if hero_icon %}
+          <div class="hero__icon">{{ hero_icon }}</div>
+        {% endif %}
+        {% if hero_title %}
+          <h1 class="hero__title">{{ hero_title }}</h1>
+        {% endif %}
+
+        {% if hero_text %}
+          <div class="hero__text">
+            {% autoescape false %}{{ hero_text }}{% endautoescape %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  <div class="services-detail__content l-container l-container--inset">{{ content.body }}</div>
+</article>

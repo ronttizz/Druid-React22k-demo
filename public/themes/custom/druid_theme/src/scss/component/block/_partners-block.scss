@@ -1,0 +1,36 @@
+.partners {
+  .partners__title {
+    font-size: 1.125rem;
+    font-weight: normal;
+  }
+
+  .partners__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: 0 -1rem;
+  }
+
+  .partner {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    max-width: 180px;
+    width: auto;
+
+    .partner__link {
+      display: block;
+    }
+  }
+
+  .partner--klarna {
+    img {
+      height: 35px;
+    }
+  }
+
+  .partner--itewiki {
+    img {
+      height: 55px;
+    }
+  }
+}

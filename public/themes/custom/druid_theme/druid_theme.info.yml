@@ -1,0 +1,24 @@
+name: Druid Theme
+description: An Druid Drupal theme - Based on stable.
+type: theme
+core_version_requirement: ^9 || ^10
+screenshot: screenshot.png
+base theme: stable
+
+# Define Libraries
+libraries:
+  - druid_theme/global-styling
+  - druid_theme/overlaytoggle
+  - druid_theme/navcolorchange
+  - druid_theme/referenceSlider
+  - druid_theme/tableWrapper
+
+regions:
+  header_left: 'Header left'
+  header_middle: 'Header middle'
+  header_right: 'Header right'
+  overlay: 'Overlay'
+  content: 'Content'
+  footer_left: 'Footer left'
+  footer_middle: 'Footer middle'
+  footer_right: 'Footer right'

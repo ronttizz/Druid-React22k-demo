@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+// Add horizontal scroll to table so layout doesn't break on mobile.
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 0 0.75rem;
+  white-space: nowrap;
+  width: 100%;
+}

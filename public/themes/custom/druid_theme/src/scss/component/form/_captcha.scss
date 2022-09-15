@@ -1,0 +1,9 @@
+.captcha {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  @include medium-wide {
+    margin-bottom: 3rem;
+  }
+}

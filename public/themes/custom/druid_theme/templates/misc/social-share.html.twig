@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Markup for a social share component.
+ *
+ * Available variables
+ * - modifier_class: A modifier class for the component.
+ */
+#}
+
+{{ attach_library('druid_theme/misc') }}
+<div class="block block--social-share {{ modifier_class }}">
+  <ul class="social-share">
+    <li class="social-share__item social-share__item--facebook share-buttons__item">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdruid.fi{{ url|url_encode }}&t={{ title|url_encode }}" title="Share on Facebook" class="social-share__link social-share__link--facebook js-share-popup">
+        <img src="/sites/default/files/pictures/Facebook.svg" alt="Share on Facebook">
+      </a>
+    </li>
+    <li class="social-share__item social-share__item--twitter share-buttons__item">
+      <a href="https://twitter.com/intent/tweet?text={{ title|url_encode }}%20druid.fi{{ url|url_encode }}" title="Tweet" class="social-share__link social-share__link--twitter js-share-popup">
+        <img src="/sites/default/files/pictures/Twitter.svg" alt="Tweet">
+      </a>
+    </li>
+    <li class="social-share__item social-share__item--linkedin share-buttons__item">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fdruid.fi{{ url|url_encode }}&title=&summary=&source=http%3A%2F%2Fdruid.fi{{ url|url_encode }}" title="Share on LinkedIn" class="social-share__link social-share__link--linkedin js-share-popup">
+        <img src="/sites/default/files/pictures/LinkedIn.svg" alt="Share on LinkedIn">
+      </a>
+    </li>
+    <li class="social-share__item social-share__item--google share-buttons__item">
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fdruid.fi{{ url|url_encode }}" title="Share on Google+" class="social-share__link social-share__link--google js-share-popup">
+        <img src="/sites/default/files/pictures/Google+.svg" alt="Share on Google+">
+      </a>
+    </li>
+  </ul>
+</div>
+

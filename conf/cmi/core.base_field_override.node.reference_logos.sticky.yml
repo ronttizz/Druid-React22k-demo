@@ -1,0 +1,22 @@
+uuid: 560d1029-2d46-4103-b409-9fdaf5763127
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reference_logos
+id: node.reference_logos.sticky
+field_name: sticky
+entity_type: node
+bundle: reference_logos
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

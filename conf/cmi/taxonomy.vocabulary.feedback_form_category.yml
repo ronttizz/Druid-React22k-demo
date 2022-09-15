@@ -1,0 +1,8 @@
+uuid: 282494e1-b3e4-41b4-bf91-6dd2df497aca
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feedback form category'
+vid: feedback_form_category
+description: ''
+weight: 0

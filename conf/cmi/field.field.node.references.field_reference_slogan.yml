@@ -1,0 +1,19 @@
+uuid: 00154d47-efdc-45a1-9800-c83f7198648f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_slogan
+    - node.type.references
+id: node.references.field_reference_slogan
+field_name: field_reference_slogan
+entity_type: node
+bundle: references
+label: 'Reference slogan'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

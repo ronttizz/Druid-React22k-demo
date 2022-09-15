@@ -1,0 +1,28 @@
+uuid: 71319e42-b2fe-4220-8f63-efd37087d330
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-footer-menu
+  module:
+    - menu_block_current_language
+  theme:
+    - druid_theme
+id: druid_theme_mainfootermenu
+theme: druid_theme
+region: footer_middle
+weight: -8
+provider: null
+plugin: 'menu_block_current_language:main-footer-menu'
+settings:
+  id: 'menu_block_current_language:main-footer-menu'
+  label: 'Main footer menu'
+  label_display: '0'
+  provider: menu_block_current_language
+  level: 1
+  depth: 0
+  translation_providers:
+    views: views
+    menu_link_content: menu_link_content
+    default: default
+visibility: {  }

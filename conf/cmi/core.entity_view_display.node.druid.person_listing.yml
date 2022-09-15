@@ -1,0 +1,115 @@
+uuid: 65c05b93-aeb7-437d-97b3-413b8b7ecfbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.person_listing
+    - field.field.node.druid.body
+    - field.field.node.druid.field_druid_description
+    - field.field.node.druid.field_druid_drupalorg
+    - field.field.node.druid.field_druid_email
+    - field.field.node.druid.field_druid_hidden_profile
+    - field.field.node.druid.field_druid_homepage
+    - field.field.node.druid.field_druid_job_role
+    - field.field.node.druid.field_druid_job_title
+    - field.field.node.druid.field_druid_linkedin_profile
+    - field.field.node.druid.field_druid_phone
+    - field.field.node.druid.field_druid_photo
+    - field.field.node.druid.field_druid_twitter_account
+    - field.field.node.druid.field_meta_tags
+    - field.field.node.druid.field_on_contact
+    - image.style.people_listing
+    - node.type.druid
+  module:
+    - image
+    - link
+    - user
+id: node.druid.person_listing
+targetEntityType: node
+bundle: druid
+mode: person_listing
+content:
+  field_druid_drupalorg:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_druid_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_druid_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_druid_linkedin_profile:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_druid_phone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_druid_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: people_listing
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_druid_twitter_account:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_druid_description: true
+  field_druid_hidden_profile: true
+  field_druid_homepage: true
+  field_druid_job_role: true
+  field_meta_tags: true
+  field_on_contact: true
+  langcode: true

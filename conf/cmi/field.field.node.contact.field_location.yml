@@ -1,0 +1,19 @@
+uuid: 62731794-b5c8-4580-aab8-023fcf53797a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.contact
+id: node.contact.field_location
+field_name: field_location
+entity_type: node
+bundle: contact
+label: Location
+description: 'Add your google maps location here'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

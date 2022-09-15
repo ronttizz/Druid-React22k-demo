@@ -1,0 +1,23 @@
+uuid: bbf1691c-5f9b-4719-8c09-9b29fc78ac16
+langcode: fi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: Etusivu
+tags:
+  canonical_url: '[site:url]'
+  description: 'Olemme Drupal-julkaisujärjestelmän ja ketterien ohjelmistokehitysprosessien kärkiosaajia Suomessa. Tarjoamme ratkaisut palvelun koko elinkaarelle.'
+  shortlink: '[site:url]'
+  title: 'Drupal-verkkopalvelut ketterästi ja laadukkaasti | [site:name]'
+  og_description: 'Olemme Drupal-julkaisujärjestelmän ja ketterien ohjelmistokehitysprosessien kärkiosaajia Suomessa. Tarjoamme ratkaisut palvelun koko elinkaarelle.'
+  og_image: 'http://druid.fi/sites/default/files/boxes_white_0_0.jpg'
+  og_image_url: 'http://druid.fi/sites/default/files/boxes_white_0_0.jpg'
+  og_site_name: '[site:name]'
+  og_url: '[site:url]'
+  twitter_cards_description: 'Olemme Drupal-julkaisujärjestelmän ja ketterien ohjelmistokehitysprosessien kärkiosaajia Suomessa. Tarjoamme ratkaisut palvelun koko elinkaarelle.'
+  twitter_cards_image: 'http://druid.fi/sites/default/files/boxes_white_0_0.jpg'
+  twitter_cards_page_url: '[site:url]'
+  twitter_cards_title: 'Drupal-verkkopalvelut ketterästi ja laadukkaasti | [site:name]'
+  twitter_cards_type: summary

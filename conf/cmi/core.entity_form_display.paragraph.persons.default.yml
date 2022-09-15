@@ -1,0 +1,40 @@
+uuid: c0f13721-a584-47c9-8d2c-507743224454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.persons.field_persons_view
+    - field.field.paragraph.persons.field_title
+    - paragraphs.paragraphs_type.persons
+id: paragraph.persons.default
+targetEntityType: paragraph
+bundle: persons
+mode: default
+content:
+  field_persons_view:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

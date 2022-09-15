@@ -1,0 +1,20 @@
+uuid: 6a8be6dd-0b6c-4ed8-8173-32acb6637745
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - druid_theme
+id: languageswitcher_3
+theme: druid_theme
+region: overlay
+weight: -8
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

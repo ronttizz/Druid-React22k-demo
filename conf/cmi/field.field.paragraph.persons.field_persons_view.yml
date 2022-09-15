@@ -1,0 +1,23 @@
+uuid: 1cf61d95-c14b-4e0b-ac89-951aa09d7358
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_persons_view
+    - paragraphs.paragraphs_type.persons
+id: paragraph.persons.field_persons_view
+field_name: field_persons_view
+entity_type: paragraph
+bundle: persons
+label: 'Persons view'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

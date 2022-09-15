@@ -1,0 +1,8 @@
+uuid: 4c2430c4-0566-4218-b4c4-c084885533da
+langcode: en
+status: true
+dependencies: {  }
+name: 'Key numbers'
+vid: key_numbers
+description: 'Key numbers of company'
+weight: 0

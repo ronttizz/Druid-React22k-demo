@@ -1,0 +1,52 @@
+uuid: d7827412-6295-4dfd-8c14-5a0458713c15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_offices
+    - paragraphs.paragraphs_type.office
+    - paragraphs.paragraphs_type.offices
+  module:
+    - entity_reference_revisions
+id: paragraph.offices.field_p_offices
+field_name: field_p_offices
+entity_type: paragraph
+bundle: offices
+label: Offices
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      office: office
+    negate: 0
+    target_bundles_drag_drop:
+      content_promotion:
+        weight: 10
+        enabled: false
+      content_promotions:
+        weight: 11
+        enabled: false
+      hero:
+        weight: 12
+        enabled: false
+      liftup:
+        weight: 13
+        enabled: false
+      liftups:
+        weight: 14
+        enabled: false
+      office:
+        weight: 15
+        enabled: true
+      offices:
+        weight: 9
+        enabled: false
+      persons:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

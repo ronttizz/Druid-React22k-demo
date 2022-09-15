@@ -1,0 +1,39 @@
+.references-detail__content {
+  margin: 3rem 0;
+
+  @include small {
+    line-height: 1.5rem;
+  }
+
+  @include medium-wide {
+    @include font-size(18px);
+    line-height: 2rem;
+  }
+
+  @include wide {
+    @include font-size(20px);
+    margin-top: 4rem;
+  }
+}
+
+.references-detail__reference-technologies__wrapper {
+  background: $gray-light;
+}
+
+.references-detail__reference-technologies {
+  padding: 1rem 0;
+}
+
+.references-detail__similar {
+  margin-top: 4rem;
+
+  @include wide {
+    margin-top: 6rem;
+  }
+}
+
+.references-detail__similar {
+  .references-listing__title {
+    text-align: center;
+  }
+}

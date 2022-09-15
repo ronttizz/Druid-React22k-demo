@@ -1,0 +1,32 @@
+{% set person_title = label %}
+{% set person_image = content.field_druid_photo %}
+{% set person_job_title = content.field_druid_job_title %}
+{% set person_phone = content.field_druid_phone %}
+{% set person_email = content.field_druid_email %}
+{% set person_linkedin = content.field_druid_linkedin_profile %}
+{% set person_twitter = content.field_druid_twitter_account %}
+{% set person_drupal = content.field_druid_drupalorg %}
+{% set person_url = url %}
+{% set mail = node.field_druid_email[0].value %}
+
+<div class="person person--contact" itemscope itemtype="http://schema.org/Person">
+    {% if person_image|render %}
+      <div class="person__image person__image--contact">{{ person_image }}</div>
+    {% endif %}
+    {% if person_title|render %}
+      <div class="person__info">
+      {% if person_title|render %}
+        <div class="person__title person__title--contact" itemprop="name">{{ person_title }}</div>
+      {% endif %}
+      {% if person_job_title|render %}
+        <div class="person__job-title person__job-title--contact" itemprop="job-title">{{ person_job_title }}</div>
+      {% endif %}
+      {% if person_phone|render %}
+        <div class="person__phone person__phone--contact" itemprop="telephone">{{ person_phone }}</div>
+      {% endif %}
+      {% if person_email|render %}
+        <a href="mailto:{{ mail }}" class="person__email person__email--contact" itemprop="email">{{ person_email }}</a>
+      {% endif %}
+      </div>
+    {% endif %}
+</div>

@@ -1,0 +1,8 @@
+.services-listing__wrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include wide {
+    margin-top: 3rem;
+  }
+}

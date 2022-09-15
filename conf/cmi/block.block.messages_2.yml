@@ -1,0 +1,20 @@
+uuid: 83fe5d3d-7b7d-49a4-aa31-49e359e890c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druid_theme
+id: messages_2
+theme: druid_theme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

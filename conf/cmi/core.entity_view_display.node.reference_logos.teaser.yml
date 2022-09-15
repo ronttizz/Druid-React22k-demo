@@ -1,0 +1,22 @@
+uuid: f3061c2d-4798-454d-8544-68b9b3268c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reference_logos.field_logo_only_link
+    - node.type.reference_logos
+  module:
+    - user
+id: node.reference_logos.teaser
+targetEntityType: node
+bundle: reference_logos
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_logo_only_link: true
+  field_reference_customer: true
+  langcode: true

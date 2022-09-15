@@ -1,0 +1,33 @@
+uuid: 23082180-56f7-4b6e-9cae-e63df58cb59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.feedback_form_category.field_body
+    - field.field.taxonomy_term.feedback_form_category.field_title
+    - taxonomy.vocabulary.feedback_form_category
+  module:
+    - text
+id: taxonomy_term.feedback_form_category.default
+targetEntityType: taxonomy_term
+bundle: feedback_form_category
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

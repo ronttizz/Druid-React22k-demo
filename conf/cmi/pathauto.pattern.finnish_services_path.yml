@@ -1,0 +1,33 @@
+uuid: 6a02b8f5-95c7-4a88-8c53-689162432481
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: finnish_services_path
+label: 'Finnish Services Path'
+type: 'canonical_entities:node'
+pattern: '/palvelut/[node:title]'
+selection_criteria:
+  7204b478-a40e-46fd-b389-ca51d9a73dde:
+    id: node_type
+    negate: false
+    uuid: 7204b478-a40e-46fd-b389-ca51d9a73dde
+    context_mapping:
+      node: node
+    bundles:
+      services: services
+  d5a58d58-f88f-4434-8725-b09410163826:
+    id: language
+    negate: false
+    uuid: d5a58d58-f88f-4434-8725-b09410163826
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

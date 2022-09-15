@@ -1,0 +1,23 @@
+uuid: e140372c-77ea-4540-abaf-d29d881af92f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_boolean_react
+    - node.type.references
+id: node.references.field_boolean_react
+field_name: field_boolean_react
+entity_type: node
+bundle: references
+label: React
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: dcbb05e4-8002-4efb-815e-8d71f97b399a
+langcode: fi
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druid_theme
+id: druid_theme_branding
+theme: druid_theme
+region: header_left
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

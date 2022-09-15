@@ -1,0 +1,19 @@
+uuid: fed39e39-9fe3-4873-820f-e7e36602874e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_location
+    - paragraphs.paragraphs_type.office
+id: paragraph.office.field_p_location
+field_name: field_p_location
+entity_type: paragraph
+bundle: office
+label: Location
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

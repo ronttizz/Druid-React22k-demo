@@ -1,0 +1,21 @@
+uuid: cb5c4372-440c-4491-9008-8bca2a83629a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_job_role
+    - node.type.druid
+  module:
+    - options
+id: node.druid.field_druid_job_role
+field_name: field_druid_job_role
+entity_type: node
+bundle: druid
+label: 'Job role'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

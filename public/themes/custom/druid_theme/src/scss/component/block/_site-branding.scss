@@ -1,0 +1,17 @@
+.site-branding__logo {
+  margin-bottom: 0;
+
+  &--maintenance {
+    margin-bottom: 2rem;
+    width: 150px;
+  }
+
+  .site-logo__link {
+    img {
+      @include wide {
+        height: 2.5rem;
+        max-width: none;
+      }
+    }
+  }
+}

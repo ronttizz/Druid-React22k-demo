@@ -1,0 +1,24 @@
+uuid: 835fa4ca-4bd1-411c-ab12-1fa5167f1e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_p_offices
+    - paragraphs.paragraphs_type.offices
+  module:
+    - entity_reference_revisions
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_p_offices:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

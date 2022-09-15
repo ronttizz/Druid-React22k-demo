@@ -1,0 +1,47 @@
+uuid: 2421e060-5376-459a-84fa-377babb78f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_header
+    - node.type.services
+    - paragraphs.paragraphs_type.content_promotion
+    - paragraphs.paragraphs_type.content_promotions
+  module:
+    - entity_reference_revisions
+id: node.services.field_paragraph_header
+field_name: field_paragraph_header
+entity_type: node
+bundle: services
+label: 'Page header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_promotion: content_promotion
+      content_promotions: content_promotions
+    target_bundles_drag_drop:
+      content_promotion:
+        weight: 7
+        enabled: true
+      content_promotions:
+        weight: 8
+        enabled: true
+      hero:
+        weight: 9
+        enabled: false
+      liftup:
+        weight: 10
+        enabled: false
+      liftups:
+        weight: 11
+        enabled: false
+      persons:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,168 @@
+<?php
+
+/**
+ * @file
+ * Druid theme.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Extension\ExtensionPathResolver;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function druid_theme_preprocess_page(&$variables) {
+  $variables['langcode'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function druid_theme_preprocess_menu_local_task(&$variables) {
+  $variables['element']['#link']['url']->setOption('attributes', ['class' => ['tasks__link']]);
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function druid_theme_preprocess_paragraph(&$variables) {
+  $variables['paragraph_id'] = $variables['paragraph']->id();
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * @todo change the hook after https://www.drupal.org/node/939462
+ */
+function druid_theme_preprocess_node(&$variables) {
+  $variables['author_name'] = '';
+  $node_type = $variables['node']->getType();
+  $node = $variables['elements']['#node'];
+
+  if ($node_type === 'blog') {
+    $block = Block::load('druid_theme_ctatextbutton');
+
+    if ($block instanceof EntityInterface) {
+      $variables['CTA_block'] = \Drupal::service('entity_type.manager')
+        ->getViewBuilder('block')
+        ->view($block);
+    }
+
+    $author_nid = $variables['elements']['#node']->get('field_author')->getString();
+    $author = Node::load($author_nid);
+
+    $variables['author_nid'] = $author_nid;
+
+    if (!empty($author)) {
+      $variables['author_name'] = $author->getTitle();
+    }
+  }
+
+  if ($node_type === 'references') {
+    $block = Block::load('druid_theme_ctatextbutton');
+
+    if ($block instanceof EntityInterface) {
+      $variables['CTA_block'] = \Drupal::service('entity_type.manager')
+        ->getViewBuilder('block')
+        ->view($block);
+    }
+
+    // Output only the actual value of the body, not the summary,.
+    $variables['body_no_summary'] = $node->get('body')->value;
+  }
+
+  if ($node_type === 'contact') {
+    $variables['contact_druid_list'] = $node->get('field_contact_druid')->target_id;
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function druid_preprocess_field__main_body(&$variables) {
+  // Check if services CT has body with summary.
+  if ($variables['element']['#bundle'] == 'services') {
+    $field_body = $variables['element']['#object']->get('body');
+    $variables['body_has_summary'] = FALSE;
+    if ($field_body->summary) {
+      $variables['body_has_summary'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function druid_theme_preprocess_field__webform(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->getType() == 'page') {
+    $variables['webform_extra_class'] = TRUE;
+  }
+  else {
+    $variables['webform_extra_class'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function druid_theme_preprocess_block(&$variables) {
+  $block_id = $variables['elements']['#id'];
+
+  if ($block_id == 'druid_theme_key_numbers') {
+    $variables['langcode'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  }
+
+  // Create variable on block level to check if front page.
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function druid_theme_preprocess_maintenance_page(&$variables) {
+  $variables['logopath'] = '/' . ExtensionPathResolver::getPath()('theme', 'druid_theme') . '/logo-black.svg';
+}
+
+/**
+ * Implements theme_preprocess_link().
+ */
+function druid_theme_preprocess_links__language_block(&$variables) {
+  $currentLanguageID = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+  // Add classes to the language switcher menu.
+  $variables['attributes']['class'] += [
+    '1' => 'menu',
+    '2' => 'menu--language',
+  ];
+
+  // Add custom link classes.
+  foreach ($variables['links'] as $key => $link) {
+    $linkLanguage = $link['link']['#options']['language'];
+
+    $link['link']['#title'] = $linkLanguage->get('id');
+
+    $link['link']['#options']['attributes']['class'] += [
+      '1' => 'menu__link',
+      '2' => 'menu--language__link',
+    ];
+
+    $link['attributes']['class'][] = 'menu__item';
+    $link['attributes']['class'][] = 'menu--language__item';
+
+    if ($currentLanguageID === $linkLanguage->get('id')) {
+      $link['link']['#options']['attributes']['class'][] = 'menu--language__link--is-active';
+      $link['attributes']['class'][] = 'menu--language__item--is-active';
+    }
+
+    // Add the item to the list of links.
+    $variables['links'][$key] = $link;
+  }
+}

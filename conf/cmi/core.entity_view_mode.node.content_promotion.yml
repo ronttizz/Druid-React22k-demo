@@ -1,0 +1,10 @@
+uuid: a8ed9950-e306-474f-8995-5c27d36fae50
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.content_promotion
+label: 'Content promotion'
+targetEntityType: node
+cache: true

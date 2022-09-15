@@ -1,0 +1,17 @@
+.footer-menu {
+  margin-bottom: 1.5rem;
+}
+
+.footer-menu__link {
+  text-decoration: none;
+  color: $black;
+
+  &.is-active {
+    color: $primary-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}

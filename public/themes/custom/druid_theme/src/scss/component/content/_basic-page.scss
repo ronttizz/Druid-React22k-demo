@@ -1,0 +1,28 @@
+// purkkaa
+
+.basic-page {
+  .main-content__container {
+    margin: 0 auto;
+    max-width: $container;
+    margin-top: 3rem;
+
+    @include wide {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.basic-page__heading {
+  max-width: 1200px;
+  margin: 2.5rem auto -2.5rem;
+}
+
+.node__field_extra_content {
+  margin: 0 auto;
+  max-width: $container;
+  margin-top: 3rem;
+
+  @include wide {
+    margin-top: 5rem;
+  }
+}

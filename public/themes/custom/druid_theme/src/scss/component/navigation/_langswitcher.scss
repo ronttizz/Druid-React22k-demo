@@ -1,0 +1,68 @@
+.l-overlay .langswitcher {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  max-width: fit-content;
+
+  @include wide {
+    display: none;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.l-header__right .langswitcher {
+  display: none;
+
+  @include wide {
+    display: flex;
+    margin-left: 2rem;
+  }
+}
+
+.langswitcher {
+  border: 1px solid $primary-color;
+  transition: all 0.1s ease-in-out;
+
+  @include wide {
+    display: inline-block;
+  }
+
+  a {
+    @include font-size(15px);
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    padding: 0.25rem 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    min-width: 45px;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $red;
+    }
+  }
+}
+
+.langswitcher__item {
+  border-left: 1px solid $primary-color;
+  display: inline-block;
+
+  &:first-of-type {
+    border-right: 1px solid $primary-color;
+    border-left: 0;
+  }
+
+  &.is-active {
+    a {
+      color: $white;
+      background: $primary-color;
+    }
+  }
+}

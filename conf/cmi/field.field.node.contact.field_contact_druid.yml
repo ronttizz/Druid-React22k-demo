@@ -1,0 +1,26 @@
+uuid: a3e9373f-2bb2-4ed5-b6bb-b15eba301dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_druid
+    - node.type.contact
+    - views.view.druid_contact_page
+id: node.contact.field_contact_druid
+field_name: field_contact_druid
+entity_type: node
+bundle: contact
+label: 'Contact Druid'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 0187fcb1-4dec-4412-86aa-e556dd110a2e
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

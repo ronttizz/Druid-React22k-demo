@@ -1,0 +1,13 @@
+.references-detail__steps {
+  @include small {
+  }
+
+  @include medium-wide {
+    @include font-size(18px);
+    line-height: 2rem;
+  }
+
+  @include wide {
+    @include font-size(20px);
+  }
+}

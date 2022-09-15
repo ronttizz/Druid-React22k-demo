@@ -1,0 +1,108 @@
+{% set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.bundle|clean_class ~ '-detail',
+] %}
+
+{% set title = node.get('title').getString() %}
+{% set hero_title = title %}
+{% set hero_slogan = content.field_reference_slogan %}
+{% set hero_image = content.field_header_background %}
+{% set logo_image = content.field_promotion_image %}
+{% set link_target = content.field_reference_link[0]['#options']['attributes']['target'] %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="hero">
+    {% if hero_image %}
+      <div class="hero__media">
+        <div class="hero__image">
+          {{ hero_image }}
+          <div class="hero__overlay"></div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="hero__content{% if hero_slogan %} hero__content--has-slogan{% endif %}">
+      {% if logo_image|render %}
+        {% if hero_title %}
+          <h1 class="hero__title visually-hidden">{{ hero_title }}</h1>
+        {% endif %}
+      {% else %}
+        {% if hero_title %}
+          <h1 class="hero__title">{{ hero_title }}</h1>
+        {% endif %}
+      {% endif %}
+      {% if logo_image|render %}
+        <div class="hero__logo">
+          {{ logo_image }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="references-detail__reference-technologies__wrapper">
+    <div class="l-container l-container--inset">
+      <div class="references-detail__reference-technologies reference-technologies">
+        <div class="reference-technologies__type reference-technologies__type--design{% if node.field_boolean_design.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/design-icon.html.twig' %}
+          <span class="reference-technologies__type-name">Design</span>
+        </div>
+        <div class="reference-technologies__type reference-technologies__type--react{% if node.field_boolean_react.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/react-icon.html.twig' %}
+          <span class="reference-technologies__type-name">React</span>
+        </div>
+        <div class="reference-technologies__type reference-technologies__type--drupal{% if node.field_boolean_drupal.value == '1' %} reference-technologies__type--is-checked{% endif %}">
+          {% include '@druid_theme/misc/drupal-icon.html.twig' %}
+          <span class="reference-technologies__type-name">Drupal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if content.field_reference_quote|render %}
+    <div class="references-detail__quote">
+      <div class="references-quote references-detail__inner l-container l-container--inset">
+        <div class="references-quote__quote">{{ content.field_reference_quote }}</div>
+        <div class="references-quote__quotee quotee">
+          <span class="quotee__name">{{ content.field_reference_customer_name }}</span>
+          <span class="quotee__divider">-</span>
+          <span class="quotee__function">{{ content.field_reference_customer_title }}</span>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if not content.field_reference_quote|render %}
+    <div class="reference--no-quote l-container l-container--inset">
+  {% else %}
+    <div class="l-container l-container--inset">
+  {% endif %}
+    {% if content.field_reference_steps|render %}
+      <div class="references-detail__steps references-detail__item--with-border">{{ content.field_reference_steps }}</div>
+    {% endif %}
+    {% if body_no_summary|render %}
+      <div class="references-detail__content">{{ body_no_summary|raw }}</div>
+    {% endif %}
+    {% if CTA_block %}
+      <div class="references-detail__cta">{{ CTA_block }}</div>
+    {% endif %}
+
+      {% if content.links %}
+        <div class="node__links">{{ content.links }}</div>
+      {% endif %}
+      {{ content.comment }}
+    {% if content.field_reference_laptop|render %}
+      <div class="references-detail__showcase references-detail__item--with-border">
+        <div class="references-showcase references-detail__inner">
+          <div class="references-showcase__image">
+            {{ content.field_reference_laptop }}
+          </div>
+          <a href="{{ content.field_reference_link[0]['#url'] }}" class="button"{% if link_target %} target="{{ link_target }}"{% endif %}>
+            {{ content.field_reference_link[0]['#title'] }}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+    {% if drupal_view('references', 'other_references') %}
+      <div class="references-detail__similar references-detail__item--with-border">
+        {{ drupal_view('references', 'other_references') }}
+      </div>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,23 @@
+uuid: c4859c2b-c731-44f4-865d-732a3c59634d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.druid
+  module:
+    - metatag
+id: node.druid.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: druid
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:5:{s:5:"title";s:34:"[current-page:title] | [site:name]";s:13:"canonical_url";s:18:"[current-page:url]";s:18:"twitter_cards_type";s:7:"summary";s:18:"twitter_cards_site";s:8:"@druidfi";s:21:"twitter_cards_site_id";s:9:"760120086";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

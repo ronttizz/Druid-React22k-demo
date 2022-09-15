@@ -1,0 +1,31 @@
+uuid: 52c44fea-e50b-4936-bc40-e684ae0b9cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_promotion.field_p_promoted_content
+    - paragraphs.paragraphs_type.content_promotion
+id: paragraph.content_promotion.default
+targetEntityType: paragraph
+bundle: content_promotion
+mode: default
+content:
+  field_p_promoted_content:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

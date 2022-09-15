@@ -1,0 +1,23 @@
+uuid: 4fd6da6f-43ea-4afd-8b68-f3c46ff4f2b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_on_contact
+    - node.type.druid
+id: node.druid.field_on_contact
+field_name: field_on_contact
+entity_type: node
+bundle: druid
+label: 'Show on Contact'
+description: 'Check the box if you want to show this Druid on the contact page'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Show on Contact Page'
+  off_label: Default
+field_type: boolean

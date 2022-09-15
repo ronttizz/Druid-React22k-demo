@@ -1,0 +1,17 @@
+uuid: 72ec9711-3c21-48d5-a343-a002ec96462d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Slide
+type: slide
+description: 'Single slide for a hero slider.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

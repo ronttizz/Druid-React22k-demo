@@ -1,0 +1,15 @@
+uuid: a1ec5987-58ae-40a7-99cc-e48cd6898012
+langcode: en
+status: true
+dependencies: {  }
+name: service_icon
+label: 'Service icon'
+effects:
+  df7b233c-f669-4256-8bc7-8a4ab4f9020d:
+    uuid: df7b233c-f669-4256-8bc7-8a4ab4f9020d
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: true

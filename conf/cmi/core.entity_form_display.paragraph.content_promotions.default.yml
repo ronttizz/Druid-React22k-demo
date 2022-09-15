@@ -1,0 +1,53 @@
+uuid: d89567c1-31af-49bf-8e71-6bb276fd9f7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_promotions.field_p_call_to_action
+    - field.field.paragraph.content_promotions.field_p_content_promotion
+    - field.field.paragraph.content_promotions.field_p_title
+    - paragraphs.paragraphs_type.content_promotions
+  module:
+    - link
+    - paragraphs
+id: paragraph.content_promotions.default
+targetEntityType: paragraph
+bundle: content_promotions
+mode: default
+content:
+  field_p_call_to_action:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_p_content_promotion:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

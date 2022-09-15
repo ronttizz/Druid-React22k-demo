@@ -1,0 +1,48 @@
+.key-number {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+
+  @include medium-small {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  @include wide {
+    margin: 0;
+    flex: 1 0 25%;
+    max-width: 33.333333%;
+  }
+}
+
+.key-number__inner {
+  border: 1px solid $off-white;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.key-number__value {
+  @include font-size(90px);
+  color: $red;
+  font-weight: 600;
+  margin: 0;
+  line-height: 100%;
+  padding: 2rem 0 1rem;
+}
+
+.key-number__extra {
+  line-height: 100%;
+  @include font-size(32px);
+}
+
+.key-number__name {
+  @include font-size(16px);
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  @include extrawide {
+    @include font-size(18px);
+  }
+}

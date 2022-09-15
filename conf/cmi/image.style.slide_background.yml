@@ -1,0 +1,15 @@
+uuid: 7c56888a-438f-4233-a400-d62d9711807a
+langcode: en
+status: true
+dependencies: {  }
+name: slide_background
+label: 'Slide background'
+effects:
+  71b73f0e-3396-4cc2-a600-ae9f1c8f86b5:
+    uuid: 71b73f0e-3396-4cc2-a600-ae9f1c8f86b5
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false

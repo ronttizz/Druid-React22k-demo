@@ -1,0 +1,18 @@
+uuid: 38b91c08-668d-4247-8200-daad4fa12aee
+langcode: fi
+status: true
+dependencies:
+  module:
+    - comment
+    - media
+    - system
+id: anonymous
+label: 'Anonyymi käyttäjä'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view media'

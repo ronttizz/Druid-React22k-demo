@@ -1,0 +1,35 @@
+.services-person-listing {
+  @include medium-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.services-person-listing--multiple {
+  margin: 0 -#{$gutter};
+}
+
+.services-person-listing--multiple:not(.services-person-listing--3) {
+  .person {
+    @include medium-small {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.services-person-listing--1 {
+  @include medium-small {
+    justify-content: center;
+  }
+}
+
+.services-person-listing--3 {
+  .person {
+    @include medium-wide {
+      flex-basis: 33%;
+      margin-bottom: 0;
+      max-width: 33%;
+    }
+  }
+}

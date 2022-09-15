@@ -1,0 +1,10 @@
+uuid: 6a2568d6-ab68-47b8-a3d5-6788d3811933
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.person_listing
+label: 'Person listing'
+targetEntityType: node
+cache: true

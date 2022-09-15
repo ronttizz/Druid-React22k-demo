@@ -1,0 +1,30 @@
+uuid: 7b8ac780-c6f7-4c42-9c72-f2d54b18592d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.references
+  module:
+    - system
+    - views
+  theme:
+    - druid_theme
+id: views_block__references_block_1_2
+theme: druid_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:references-block_1'
+settings:
+  id: 'views_block:references-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/references\r\n/referenssit"

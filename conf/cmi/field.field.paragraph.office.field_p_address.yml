@@ -1,0 +1,37 @@
+uuid: 05b81211-198f-4037-8066-b010c02fb183
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_address
+    - paragraphs.paragraphs_type.office
+  module:
+    - address
+id: paragraph.office.field_p_address
+field_name: field_p_address
+entity_type: paragraph
+bundle: office
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    addressLine2:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

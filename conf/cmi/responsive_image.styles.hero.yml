@@ -1,0 +1,48 @@
+uuid: 7eded4ac-01db-44bb-94d1-95f9a0781357
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_full
+    - image.style.hero_large
+    - image.style.hero_large_huge
+    - image.style.hero_medium
+    - image.style.hero_small
+    - image.style.hero_tiny
+  theme:
+    - druid_theme
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_full
+    breakpoint_id: druid_theme.extrawide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_large_huge
+    breakpoint_id: druid_theme.wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_large
+    breakpoint_id: druid_theme.medium_wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_medium
+    breakpoint_id: druid_theme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_small
+    breakpoint_id: druid_theme.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_tiny
+    breakpoint_id: druid_theme.tiny
+    multiplier: 1x
+breakpoint_group: druid_theme
+fallback_image_style: hero_tiny

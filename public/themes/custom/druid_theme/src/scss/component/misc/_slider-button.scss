@@ -1,0 +1,76 @@
+.slider-button {
+  position: absolute;
+  width: 2rem;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+
+  @include small {
+    width: 3rem;
+  }
+
+  @include medium-wide {
+    width: 3.5rem;
+  }
+
+  @include extrawide {
+    width: 3rem;
+  }
+
+  @media screen and (min-width: 1300px) {
+    width: 4rem;
+  }
+
+  svg {
+    position: absolute;
+    color: $red;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.25rem;
+    width: 100%;
+
+    @include small {
+      height: 1.5rem;
+    }
+
+    @include medium-wide {
+      height: 2rem;
+    }
+
+    @include extrawide {
+      height: 2rem;
+    }
+
+    @media screen and (min-width: 1300px) {
+      height: 3rem;
+    }
+  }
+}
+
+.slider-button--right {
+  right: 0;
+
+  // @include extrawide {
+  //   right: 1.5rem;
+  // }
+
+  svg {
+    right: 50%;
+    transform: translateY(-50%) translateX(50%);
+  }
+}
+
+.slider-button--left {
+  left: 0;
+
+  // @include extrawide {
+  //   left: 1.5rem;
+  // }
+
+  svg {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}

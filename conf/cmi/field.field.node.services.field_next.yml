@@ -1,0 +1,28 @@
+uuid: 28592d3d-4e5d-4e21-af77-2c7d53230fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next
+    - node.type.services
+id: node.services.field_next
+field_name: field_next
+entity_type: node
+bundle: services
+label: Next
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: created
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

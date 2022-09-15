@@ -1,0 +1,53 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      dist/css/styles-lib.css: {}
+      dist/css/styles.css: {}
+#  dependencies:
+#    - core/modernizr
+
+overlaytoggle:
+  version: 1.x
+  js:
+    dist/js/overlayToggle.min.js: {}
+  dependencies:
+     - core/drupal
+     - core/jquery
+
+navcolorchange:
+  version: 1.x
+  js:
+    dist/js/navColorChange.min.js: {}
+  dependencies:
+     - core/drupal
+     - core/jquery
+
+references:
+  version: 1.0
+  css:
+    component:
+      components/asset-builds/css/references.css: {}
+
+referenceSlider:
+  version: 1.x
+  js:
+    dist/js/referenceSlider.min.js: {}
+    dist/js/slider.min.js: {}
+    /libraries/slick/slick/slick.min.js: { minified: true }
+  css:
+    base:
+      /libraries/slick/slick/slick.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+tableWrapper:
+  version: 1.x
+  js:
+    dist/js/tableWrapper.min.js: {}
+  dependencies:
+     - core/drupal
+     - core/jquery
+     - core/jquery.once

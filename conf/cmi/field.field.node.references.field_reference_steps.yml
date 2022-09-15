@@ -1,0 +1,30 @@
+uuid: b6536f7d-359d-4ff1-8202-2bfb7f0497d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_steps
+    - node.type.references
+  module:
+    - text
+id: node.references.field_reference_steps
+field_name: field_reference_steps
+entity_type: node
+bundle: references
+label: Steps
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<h2>Lähtötilanne</h2>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+  -
+    value: "<h2>Mitä teimme?</h2>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+  -
+    value: "<h2>Tulokset</h2>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

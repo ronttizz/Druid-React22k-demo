@@ -1,0 +1,20 @@
+uuid: ba50e10b-c273-45ce-a55b-ef4aa7a3fe75
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reference_logos
+  module:
+    - path
+id: node.reference_logos.path
+field_name: path
+entity_type: node
+bundle: reference_logos
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

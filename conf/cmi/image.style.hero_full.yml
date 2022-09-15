@@ -1,0 +1,17 @@
+uuid: 7a9b09c7-da74-4741-9578-eb4142de4c77
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_full
+label: 'Hero full (2080x670)'
+effects:
+  e7ac981f-6b85-4527-a699-2758bcd95f8c:
+    uuid: e7ac981f-6b85-4527-a699-2758bcd95f8c
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 2080
+      height: 670
+      crop_type: focal_point

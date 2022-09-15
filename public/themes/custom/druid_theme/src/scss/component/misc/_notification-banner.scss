@@ -1,0 +1,39 @@
+.notification {
+  background-color: $red;
+  color: $white;
+  display: block;
+  padding: $gutter * .5 $gutter;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  visibility: visible;
+  width: 100%;
+  z-index: 18;
+
+  .toolbar-vertical &,
+  .toolbar-horizontal & {
+    top: 39px;
+  }
+
+  .toolbar-tray-open & {
+    top: 79px;
+  }
+
+  p {
+    @include font-size(14px);
+    font-weight: bold;
+
+    @include wide {
+      @include font-size(16px);
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

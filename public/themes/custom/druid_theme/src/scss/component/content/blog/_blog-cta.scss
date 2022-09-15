@@ -1,0 +1,44 @@
+// .blog-cta {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 5rem 0;
+
+//   @include medium-small {
+//     flex-direction: row;
+//   }
+
+//   @include wide {
+//     margin: 0 0 5rem;
+//   }
+
+//   .person {
+//     width: 100%;
+//     margin-bottom: 0;
+//   }
+
+//   .block--cta {
+//     @include medium-small {
+//       margin-right: 2rem;
+//     }
+
+//     @include wide {
+//       margin-right: 4rem;
+//     }
+//   }
+
+//   .sales-druid {
+//     @include medium-small {
+//       margin-left: 2rem;
+//     }
+
+//     @include wide {
+//       margin-left: 4rem;
+//     }
+//   }
+// }
+
+.blog-cta {
+  text-align: center;
+}

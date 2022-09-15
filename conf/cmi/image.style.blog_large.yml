@@ -1,0 +1,17 @@
+uuid: e6dd1041-3cc8-4e0a-9804-4bf7bb10da70
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_large
+label: 'Blog large'
+effects:
+  4a4c7fd3-bd79-4f69-9425-d8cf1ee7726a:
+    uuid: 4a4c7fd3-bd79-4f69-9425-d8cf1ee7726a
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1800
+      height: 730
+      crop_type: focal_point

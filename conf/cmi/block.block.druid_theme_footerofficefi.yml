@@ -1,0 +1,25 @@
+uuid: c8053fc0-6015-4a19-8625-99aefbb00f2c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a1a38d80-2b2c-4617-9000-a4869f457183'
+  module:
+    - block_content
+  theme:
+    - druid_theme
+id: druid_theme_footerofficefi
+theme: druid_theme
+region: footer_left
+weight: -7
+provider: null
+plugin: 'block_content:a1a38d80-2b2c-4617-9000-a4869f457183'
+settings:
+  id: 'block_content:a1a38d80-2b2c-4617-9000-a4869f457183'
+  label: 'Footer office FI'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

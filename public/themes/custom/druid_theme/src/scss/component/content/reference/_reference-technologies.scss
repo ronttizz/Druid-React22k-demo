@@ -1,0 +1,22 @@
+.reference-technologies {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 -.5rem;
+}
+
+
+.reference-technologies__type {
+  opacity: .35;
+  padding: 0 .5rem;
+  line-height: 1;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $red;
+  }
+}
+
+.reference-technologies__type--is-checked {
+  opacity: 1;
+}

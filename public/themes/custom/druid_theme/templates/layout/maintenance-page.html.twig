@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ *
+ * @ingroup themeable
+ */
+#}
+<main role="main" class="l-container l-container--inset l-container--small no-hero">
+  <img class="site-branding__logo site-branding__logo--maintenance" src="{{ logopath }}" />
+
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+
+  <div class="content">
+    {{ page.highlighted }}
+    {{ page.content }}
+  </div>
+</main>
+
+{% if page.sidebar_first %}
+  <aside role="complementary">
+    {{ page.sidebar_first }}
+  </aside>
+{% endif %}
+
+{% if page.sidebar_second %}
+  <aside role="complementary">
+    {{ page.sidebar_second }}
+  </aside>
+{% endif %}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}

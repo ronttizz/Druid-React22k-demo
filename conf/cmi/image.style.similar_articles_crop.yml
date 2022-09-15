@@ -1,0 +1,17 @@
+uuid: cc3bbc81-6cd6-45b4-b006-6e6c63e63f3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: similar_articles_crop
+label: 'Similar articles crop'
+effects:
+  69ddd4a5-1a62-44e3-8608-4123d86cc45c:
+    uuid: 69ddd4a5-1a62-44e3-8608-4123d86cc45c
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 220
+      height: 120
+      crop_type: focal_point

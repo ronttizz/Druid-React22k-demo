@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: "<div class=\"content-liftup__image content-liftup__image--big\">\r\n  {{ field_header_background }}\r\n</div>\r\n<h3 class=\"content-liftup--reference-title\">{{ title }}</h3>\r\n<h4 class=\"content-liftup--reference-slogan\">{{ field_reference_slogan }}</h4>"
+      header:
+        area:
+          content:
+            value: "<h2>Our other references</h2>\r\n"
+            format: full_html

@@ -1,0 +1,38 @@
+.button {
+  border: 1px solid $red;
+  border-radius: 0;
+  display: inline-block;
+  padding: 0.5rem 2.5rem;
+  background-color: $red;
+  color: $white;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: none;
+  -webkit-appearance: none;
+
+  &:hover,
+  &:focus {
+    border-color: $link-color-hover;
+    background-color: $link-color-hover;
+    color: $white;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.button--outline {
+  border: 2px solid $red;
+  background-color: transparent;
+  color: $red;
+
+  &:hover,
+  &:focus {
+    border-color: $red;
+    background-color: $red;
+    color: $white;
+  }
+}

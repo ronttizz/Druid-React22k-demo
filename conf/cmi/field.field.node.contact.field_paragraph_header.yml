@@ -1,0 +1,46 @@
+uuid: 2c8ff350-1a03-4718-a5a0-53db5fdc8590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_header
+    - node.type.contact
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: node.contact.field_paragraph_header
+field_name: field_paragraph_header
+entity_type: node
+bundle: contact
+label: 'Page header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    negate: 0
+    target_bundles_drag_drop:
+      content_promotion:
+        weight: 7
+        enabled: false
+      content_promotions:
+        weight: 8
+        enabled: false
+      hero:
+        weight: 9
+        enabled: true
+      liftup:
+        weight: 10
+        enabled: false
+      liftups:
+        weight: 11
+        enabled: false
+      persons:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

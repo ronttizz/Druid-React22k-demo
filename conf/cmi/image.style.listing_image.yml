@@ -1,0 +1,17 @@
+uuid: f152e3bf-832c-4a03-8200-dba9106ae3d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: listing_image
+label: 'Listing image'
+effects:
+  e5281a0b-5f7c-4a4e-b28e-db4038efe79b:
+    uuid: e5281a0b-5f7c-4a4e-b28e-db4038efe79b
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 520
+      height: 293
+      crop_type: focal_point

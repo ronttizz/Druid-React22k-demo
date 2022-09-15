@@ -1,0 +1,26 @@
+uuid: 5466aa45-6899-4a3f-be2a-42e198d21e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.blog
+    - node.type.druid
+id: node.blog.field_author
+field_name: field_author
+entity_type: node
+bundle: blog
+label: Author
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      druid: druid
+    sort:
+      field: _none
+field_type: entity_reference

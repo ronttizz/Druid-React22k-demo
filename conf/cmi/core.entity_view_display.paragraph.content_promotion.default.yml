@@ -1,0 +1,24 @@
+uuid: c6a426c4-150e-4fe8-8c59-4d12aae0a5e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_promotion.field_p_promoted_content
+    - paragraphs.paragraphs_type.content_promotion
+id: paragraph.content_promotion.default
+targetEntityType: paragraph
+bundle: content_promotion
+mode: default
+content:
+  field_p_promoted_content:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: content_promotion
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  uid: true

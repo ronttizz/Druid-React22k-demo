@@ -1,0 +1,64 @@
+uuid: aeca0716-c924-4544-a004-4a2f7511f5ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.druid.body
+    - field.field.node.druid.field_druid_description
+    - field.field.node.druid.field_druid_drupalorg
+    - field.field.node.druid.field_druid_email
+    - field.field.node.druid.field_druid_hidden_profile
+    - field.field.node.druid.field_druid_homepage
+    - field.field.node.druid.field_druid_job_role
+    - field.field.node.druid.field_druid_job_title
+    - field.field.node.druid.field_druid_linkedin_profile
+    - field.field.node.druid.field_druid_phone
+    - field.field.node.druid.field_druid_photo
+    - field.field.node.druid.field_druid_twitter_account
+    - field.field.node.druid.field_meta_tags
+    - field.field.node.druid.field_on_contact
+    - image.style.people_listing
+    - node.type.druid
+  module:
+    - image
+    - user
+id: node.druid.teaser
+targetEntityType: node
+bundle: druid
+mode: teaser
+content:
+  field_druid_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_druid_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: people_listing
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_druid_description: true
+  field_druid_drupalorg: true
+  field_druid_email: true
+  field_druid_hidden_profile: true
+  field_druid_homepage: true
+  field_druid_job_role: true
+  field_druid_linkedin_profile: true
+  field_druid_phone: true
+  field_druid_twitter_account: true
+  field_meta_tags: true
+  field_on_contact: true
+  langcode: true
+  links: true

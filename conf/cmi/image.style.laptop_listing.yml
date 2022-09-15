@@ -1,0 +1,15 @@
+uuid: 972bc137-d5cc-44e7-b600-f962c2108cb7
+langcode: en
+status: true
+dependencies: {  }
+name: laptop_listing
+label: 'Laptop listing'
+effects:
+  ebea4803-95be-4c31-9600-eda4e2bde716:
+    uuid: ebea4803-95be-4c31-9600-eda4e2bde716
+    id: image_scale
+    weight: 1
+    data:
+      width: 480
+      height: null
+      upscale: false

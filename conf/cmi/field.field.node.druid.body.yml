@@ -1,0 +1,23 @@
+uuid: f9fe45d1-e127-49a1-a500-ef7a780be578
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.druid
+  module:
+    - text
+id: node.druid.body
+field_name: body
+entity_type: node
+bundle: druid
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

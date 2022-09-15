@@ -1,0 +1,120 @@
+.slider__container {
+  background-color: $black-light;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    bottom: 0;
+    background: $white;
+    content: '';
+    display: block;
+    height: 10%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.slider {
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+// Slick slider styles
+.slick-slider {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.slick-list {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+  }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  display: block;
+  left: 0;
+  position: relative;
+  top: 0;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+
+// Slide dots styles.
+.slick-dots-wrapper {
+  display: none;
+}
+
+.slick-dots,
+.slick-dots li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slick-dots {
+  font-size: 0;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0 0.25rem;
+  }
+}
+
+.slick-dots__link {
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 50%;
+  display: block;
+  height: 12px;
+  width: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $red;
+  }
+}
+
+.slick-active {
+  .slick-dots__link {
+    border-color: $white;
+    background: $white;
+  }
+}

@@ -1,0 +1,52 @@
+.paragraph-id--69,
+.references-listing__other-references {
+  .slick-dots {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include medium-small {
+      margin-bottom: 2.5rem;
+    }
+
+    @include extrawide {
+      margin-bottom: 4rem;
+    }
+
+    li {
+      display: flex;
+    }
+
+    li button {
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font-size: 0;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: $gray;
+
+        @include medium-small {
+          width: 25px;
+        }
+      }
+    }
+
+    .slick-active {
+      button {
+        &::before {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}

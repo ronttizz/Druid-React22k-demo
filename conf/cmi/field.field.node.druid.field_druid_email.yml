@@ -1,0 +1,21 @@
+uuid: 01aa14b7-c205-4267-8253-83d71097ae79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_email
+    - node.type.druid
+id: node.druid.field_druid_email
+field_name: field_druid_email
+entity_type: node
+bundle: druid
+label: Email
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: info@druid.fi
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,17 @@
+uuid: dc0cb120-6bc6-48c3-bb00-0a3c5cc7090e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: reference_person
+label: 'Reference person'
+effects:
+  a721efb6-f586-4127-8ccc-e42d847cb18f:
+    uuid: a721efb6-f586-4127-8ccc-e42d847cb18f
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 80
+      height: 80
+      crop_type: focal_point

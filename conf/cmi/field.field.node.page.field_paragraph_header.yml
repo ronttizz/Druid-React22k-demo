@@ -1,0 +1,54 @@
+uuid: 6c0ec131-1bab-4918-bb47-b4bfa6e429f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_header
+    - node.type.page
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.liftups
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraph_header
+field_name: field_paragraph_header
+entity_type: node
+bundle: page
+label: 'Page header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+      liftups: liftups
+    negate: 0
+    target_bundles_drag_drop:
+      content_promotion:
+        weight: 7
+        enabled: false
+      content_promotions:
+        weight: 8
+        enabled: false
+      hero:
+        weight: 9
+        enabled: true
+      liftup:
+        weight: 10
+        enabled: false
+      liftups:
+        weight: 11
+        enabled: true
+      office:
+        weight: 14
+        enabled: false
+      offices:
+        weight: 15
+        enabled: false
+      persons:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

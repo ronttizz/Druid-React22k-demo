@@ -1,0 +1,15 @@
+uuid: d579f2e3-b270-46b0-bb00-ff659667f37a
+langcode: en
+status: true
+dependencies: {  }
+name: laptop_large
+label: 'Laptop large'
+effects:
+  32a70aa9-f7fa-43b9-8f07-074181daa743:
+    uuid: 32a70aa9-f7fa-43b9-8f07-074181daa743
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: null
+      upscale: false

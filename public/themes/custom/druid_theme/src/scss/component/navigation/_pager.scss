@@ -1,0 +1,124 @@
+.pager {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pager__items {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pager__item {
+  @include font-size(12px);
+
+  &:not(:first-child) {
+    margin-left: 0.25rem;
+
+    @include small {
+      margin-left: 0.5rem;
+    }
+
+    @include medium {
+      margin-left: 1rem;
+    }
+  }
+
+  @include small {
+    @include font-size(14px);
+  }
+
+  @include medium {
+    @include font-size(16px);
+  }
+
+  a {
+
+    &:hover,
+    &:focus {
+      border-color: $red;
+      cursor: pointer;
+    }
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  a,
+  &--ellipsis {
+    border: 1px solid transparent;
+    display: block;
+    padding: .25rem .5rem;
+    height: 2rem;
+    width: 2rem;
+    text-decoration: none;
+    color: $red;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+}
+
+// .no-touchevents {
+//   .pager__item {
+//     a {
+//       padding: .25rem .5rem;
+//       height: 2rem;
+//       width: 2rem;
+//     }
+//   }
+// }
+
+.pager__item--is-active {
+  a {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.pager__item--next,
+.pager__item--last,
+.pager__item--previous,
+.pager__item--first {
+  a {
+    &::before {
+      @include font-awesome;
+      font-size: 1rem;
+
+      @include medium-wide {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.pager__item--next {
+  a::before {
+    content: '\f105';
+  }
+}
+
+.pager__item--last {
+  a::before {
+    content: '\f101';
+  }
+}
+
+.pager__item--previous {
+  a::before {
+    content: '\f104';
+  }
+}
+
+.pager__item--first {
+  a::before {
+    content: '\f100';
+  }
+}

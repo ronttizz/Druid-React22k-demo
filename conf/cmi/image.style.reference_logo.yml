@@ -1,0 +1,15 @@
+uuid: 987eb822-18f6-40af-ae8e-3c62b50e6619
+langcode: en
+status: true
+dependencies: {  }
+name: reference_logo
+label: 'Reference logo'
+effects:
+  5639bbc6-3195-463a-90b5-2c2a47b575a0:
+    uuid: 5639bbc6-3195-463a-90b5-2c2a47b575a0
+    id: image_scale
+    weight: 2
+    data:
+      width: 640
+      height: null
+      upscale: false

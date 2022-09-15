@@ -1,0 +1,15 @@
+uuid: 9ca44ab9-e247-4f6d-9f05-05ea0dc651dd
+langcode: fi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Yleinen
+tags:
+  title: '[current-page:title] | [site:name]'
+  canonical_url: '[current-page:url]'
+  twitter_cards_site: '@druidfi'
+  twitter_cards_type: summary
+  twitter_cards_site_id: '760120086'
+  google: kc8AAbvvP4X-5NaUgmIqBqY6l0OpN4FMUiFcR365VSQ

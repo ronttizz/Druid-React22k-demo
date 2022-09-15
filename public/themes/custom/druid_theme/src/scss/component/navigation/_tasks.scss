@@ -1,0 +1,58 @@
+.tasks {
+  display: none;
+
+  @include wide {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 8rem 0 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: $gray-light;
+    z-index: 10;
+    left: 1.5rem;
+    text-align: center;
+    position: absolute;
+  }
+
+  @include extrawide {
+    left: 5rem;
+  }
+
+  &__item {
+    margin: 0.25rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    border-radius: 3px;
+    border: 1px solid $primary-color;
+    box-shadow: $box-shadow-button;
+    display: block;
+    padding: 0.25rem 0.75rem;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s, box-shadow 0.1s;
+
+    &.is-active,
+    &:hover {
+      background-color: $primary-color;
+      box-shadow: none;
+      color: $white;
+    }
+  }
+}
+
+// Hide on user login page
+.path-user .tasks {
+  display: none;
+}
+
+// Taxonomy term page
+.path-taxonomy .tasks {
+  position: static;
+  flex-direction: row;
+  margin-top: 0;
+}

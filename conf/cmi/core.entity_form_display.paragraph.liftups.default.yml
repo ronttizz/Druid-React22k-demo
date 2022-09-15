@@ -1,0 +1,34 @@
+uuid: f0fd48cd-90e2-4f6e-8ee2-fdd6232300c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.liftups.field_p_liftups
+    - paragraphs.paragraphs_type.liftups
+  module:
+    - paragraphs
+id: paragraph.liftups.default
+targetEntityType: paragraph
+bundle: liftups
+mode: default
+content:
+  field_p_liftups:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

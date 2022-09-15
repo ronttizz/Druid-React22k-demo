@@ -1,0 +1,19 @@
+uuid: f391d8fe-62b6-446f-a100-e0127dafe24e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_reference_quote
+field_name: field_reference_quote
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

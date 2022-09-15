@@ -1,0 +1,19 @@
+uuid: 1cb3e4e3-3b20-4249-bf6b-282b15c78693
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_title
+    - paragraphs.paragraphs_type.liftup
+id: paragraph.liftup.field_p_title
+field_name: field_p_title
+entity_type: paragraph
+bundle: liftup
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

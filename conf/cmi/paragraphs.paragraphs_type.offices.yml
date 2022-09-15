@@ -1,0 +1,9 @@
+uuid: 796df5f1-739d-4ba2-b8b5-5fd37cd90bbf
+langcode: en
+status: true
+dependencies: {  }
+id: offices
+label: Offices
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

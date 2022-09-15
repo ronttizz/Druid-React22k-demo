@@ -1,0 +1,17 @@
+uuid: fd0b6c5f-cb8c-45e2-a5db-bcadde8f91d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_tiny_small
+label: 'Hero tiny-small (480x815)'
+effects:
+  0b8f29eb-5fda-4fc5-8072-eb7b424a23a1:
+    uuid: 0b8f29eb-5fda-4fc5-8072-eb7b424a23a1
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 480
+      height: 815
+      crop_type: focal_point

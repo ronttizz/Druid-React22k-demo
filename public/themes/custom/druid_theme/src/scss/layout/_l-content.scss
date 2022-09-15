@@ -1,0 +1,24 @@
+.l-content {
+  padding-bottom: 3rem;
+}
+
+@include wide {
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > .block,
+    > div {
+      width: 100%;
+    }
+
+    > .block-social-media {
+      width: calc(50% - 0.75rem);
+    }
+  }
+}
+
+.layout-content {
+  overflow: hidden;
+}

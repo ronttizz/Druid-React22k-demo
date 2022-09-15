@@ -1,0 +1,28 @@
+uuid: ac0e0daa-1c97-492a-830b-096df707ac29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_slide
+    - node.type.slide
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_p_slide
+field_name: field_p_slide
+entity_type: paragraph
+bundle: hero
+label: slide
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 39da5380-b380-469a-9d7b-903a584d1ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.liftups.field_p_liftups
+    - paragraphs.paragraphs_type.liftups
+  module:
+    - entity_reference_revisions
+id: paragraph.liftups.default
+targetEntityType: paragraph
+bundle: liftups
+mode: default
+content:
+  field_p_liftups:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  uid: true

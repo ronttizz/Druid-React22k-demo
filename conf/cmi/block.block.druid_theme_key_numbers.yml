@@ -1,0 +1,30 @@
+uuid: 196d0605-f112-4f3c-8c07-8cb2e4b9e623
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.key_numbers
+  module:
+    - system
+    - views
+  theme:
+    - druid_theme
+id: druid_theme_key_numbers
+theme: druid_theme
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:key_numbers-block_1'
+settings:
+  id: 'views_block:key_numbers-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/me\r\n/us"

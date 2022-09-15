@@ -1,0 +1,78 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 19;
+  transition: background-color 0.35s ease;
+  top: 0;
+  background-color: $menu-background-darker;
+
+  .toolbar-vertical &,
+  .toolbar-horizontal & {
+    top: 39px;
+  }
+
+  .toolbar-tray-open & {
+    top: 79px;
+  }
+}
+
+.header--has-js-bg {
+  background-color: $menu-background;
+
+  @include wide {
+    background-color: transparent;
+  }
+}
+
+.header--bg {
+  background-color: $menu-background;
+}
+
+.header--bg--darker {
+  background-color: $menu-background-darker;
+}
+
+.l-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  transition: padding 0.25s ease;
+  max-width: 135em;
+  margin: 0 auto;
+
+  @include wide {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  &__left {
+    height: 1.875rem;
+    padding-right: $gutter * 2;
+    z-index: 20;
+    width: 7.5rem;
+
+    @include wide {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &__middle {
+    display: none;
+
+    @include wide {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,42 @@
+.content-promotions__content {
+  display: flex;
+  flex-direction: column;
+
+  @include medium-small {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.content-promotions {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  + .content-promotions {
+    margin-top: 4rem;
+  }
+
+  @include wide {
+    margin-top: 4rem;
+
+    + .content-promotions {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.content-promotions__title {
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+
+  @include wide {
+    font-size: $font-size-heading-2 * 1.333333;
+  }
+}
+
+.content-promotions__link {
+  display: flex;
+  justify-content: center;
+}

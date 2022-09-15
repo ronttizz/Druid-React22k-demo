@@ -1,0 +1,50 @@
+uuid: 17b6acc0-9f76-4c32-9927-375e2133957f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.feedback_form_category.field_body
+    - field.field.taxonomy_term.feedback_form_category.field_title
+    - taxonomy.vocabulary.feedback_form_category
+  module:
+    - text
+id: taxonomy_term.feedback_form_category.default
+targetEntityType: taxonomy_term
+bundle: feedback_form_category
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  translation: true

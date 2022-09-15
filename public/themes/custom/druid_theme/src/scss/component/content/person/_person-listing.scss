@@ -1,0 +1,42 @@
+.person-listing {
+  margin-bottom: 2rem;
+}
+
+.person-listing__header {
+  margin-bottom: 3rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.person-listing__content {
+  margin: -2rem -#{$gutter} 0;
+
+  @include medium-small {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include medium {
+    margin-top: -3rem;
+  }
+
+  .person {
+    margin: 2rem 0 0;
+
+    @include medium {
+      margin-top: 3rem;
+    }
+
+    @include medium-wide {
+      flex-basis: 33.333333%;
+      max-width: 33.333333%;
+    }
+
+    @media screen and (min-width: 64em) {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+  }
+}

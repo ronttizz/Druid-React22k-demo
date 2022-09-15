@@ -1,0 +1,39 @@
+uuid: 3aab3265-f5c6-4b06-a8c9-f19df168ffd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_content_promotion
+    - paragraphs.paragraphs_type.content_promotion
+    - paragraphs.paragraphs_type.content_promotions
+  module:
+    - entity_reference_revisions
+id: paragraph.content_promotions.field_p_content_promotion
+field_name: field_p_content_promotion
+entity_type: paragraph
+bundle: content_promotions
+label: 'Content promotion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_promotion: content_promotion
+    target_bundles_drag_drop:
+      content_promotion:
+        weight: 6
+        enabled: true
+      content_promotions:
+        weight: 5
+        enabled: false
+      liftup:
+        weight: 7
+        enabled: false
+      liftups:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

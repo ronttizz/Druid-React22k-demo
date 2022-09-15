@@ -1,0 +1,18 @@
+uuid: 378bc7af-24d6-4f85-956e-6ffdde63fee3
+langcode: fi
+status: true
+dependencies:
+  config:
+    - node.type.reference_logos
+id: node.reference_logos.metatag
+field_name: metatag
+entity_type: node
+bundle: reference_logos
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

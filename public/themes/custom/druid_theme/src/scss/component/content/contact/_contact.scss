@@ -1,0 +1,131 @@
+.contact__content {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  @include wide {
+    margin-top: 4rem;
+  }
+}
+
+.contact__info {
+  margin: 0 -1rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include wide {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+.contact__info__item {
+  padding: 0 1rem;
+
+  @media screen and (max-width: $wide - $max-width-deduction) {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+}
+
+.contact__druid {
+  margin-bottom: 2rem;
+  order: 2;
+
+  @include medium {
+    margin-bottom: 1rem;
+  }
+
+  @include wide {
+    order: 1;
+    margin-bottom: 0;
+    max-width: 50%;
+  }
+
+  @include extrawide {
+    max-width: 40%;
+  }
+}
+
+.contact__offices,
+.contact__location {
+  @include wide {
+    margin-top: 6rem;
+  }
+}
+
+.contact__form {
+  order: 1;
+  @include wide {
+    position: absolute;
+    right: ($gutter * 1.5);
+    top: -11.5rem;
+    margin-top: 0;
+    max-width: 50%;
+  }
+
+  @include extrawide {
+    max-width: 60%;
+  }
+
+  .icon {
+    height: 3rem;
+    width: 4rem;
+    fill: $primary-color;
+
+    @include wide {
+      height: 4.5rem;
+      width: 6rem;
+    }
+  }
+}
+
+.agile__form,
+.node__field_webform {
+  margin: 0 auto;
+
+  @include medium {
+    max-width: 50%;
+  }
+}
+
+.contact-form,
+.node__field_webform {
+  @include wide {
+    padding: 1.5rem;
+    background: rgba($white, 0.8);
+    box-shadow: 0 0 9px 1px rgba($black, 0.2);
+  }
+}
+
+.node__field_webform {
+  margin-top: 5rem;
+}
+
+.contact-form__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  @include wide {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+
+    @include wide {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.contact__offices {
+  margin-top: 4rem;
+}
+
+.webform-confirmation {
+  margin: 8rem auto;
+}

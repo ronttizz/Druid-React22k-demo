@@ -1,0 +1,9 @@
+uuid: 9b0ade08-ff9f-40f3-85b7-a57ef5979573
+langcode: en
+status: true
+dependencies: {  }
+id: liftups
+label: Liftups
+icon_uuid: null
+description: null
+behavior_plugins: {  }

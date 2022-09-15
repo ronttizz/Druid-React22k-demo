@@ -1,0 +1,81 @@
+uuid: 016097d4-a469-43a9-8252-8223df0e7e4a
+langcode: fi
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+            - TextColor
+            - Font
+            - FontSize
+        -
+          name: 'Text Align'
+          items:
+            - JustifyBlock
+            - JustifyRight
+            - JustifyCenter
+            - JustifyLeft
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+            - Indent
+            - Outdent
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+        -
+          name: 'Copy / Paste'
+          items:
+            - Copy
+            - Paste
+            - PasteFromWord
+            - PasteText
+  plugins:
+    stylescombo:
+      styles: "span.color--red|Red colored text\r\nspan.color--grey|Grey colored text\r\na.button.button--small|Button\r\na.button|Button CTA\r\na.button.button--with-arrow|Button arrow\r\ndiv.video-wrapper|Responsive video"
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

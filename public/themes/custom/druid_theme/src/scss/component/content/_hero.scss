@@ -1,0 +1,323 @@
+.hero {
+  background-color: $black-light;
+  display: flex;
+  align-items: center;
+  padding: (1rem + 1.875rem + 1rem) 0 4rem 0; // header padding-top + logo height + header padding-top
+  position: relative;
+
+  &:not(.hero--no-height) {
+    min-height: 300px;
+  }
+
+  @include wide {
+    padding: 3rem 0 6.25rem 0;
+
+    &:not(.hero--no-height) {
+      min-height: 400px;
+    }
+  }
+}
+
+.path-frontpage .hero {
+  margin-top: 0;
+  padding-bottom: 4rem;
+  padding-top: 9rem;
+
+  @include medium-wide {
+    padding-bottom: 7rem;
+    padding-top: 10rem;
+  }
+
+  @include wide {
+    padding-bottom: 9rem;
+    padding-top: 12rem;
+  }
+
+  @include extrawide {
+    padding-bottom: 13rem;
+    padding-top: 13rem;
+  }
+}
+
+.node--type-contact .hero {
+  @include wide {
+    padding-top: 4rem; // The contact page has the form over the hero so the title needs to be slightly higher.
+  }
+}
+
+.hero__media,
+.hero__overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hero__overlay {
+  background: rgba($black, 0.5);
+}
+
+.hero__logo {
+  width: 80%;
+  max-width: 450px;
+  margin: 0 auto 1rem;
+
+  @include wide {
+    width: 100%;
+  }
+}
+
+.hero__media {
+  overflow: hidden;
+
+  video {
+    display: none;
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+
+    @include medium-wide {
+      display: block;
+    }
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 1500px) {
+      position: static;
+      top: auto;
+      transform: none;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      margin: 0 auto;
+
+      @media screen and (min-width: 1500px) {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.hero--has-video {
+  .hero__image img {
+    @include medium-wide {
+      display: none;
+    }
+  }
+}
+
+.hero--has-slide {
+  .hero__image img {
+    display: none;
+  }
+
+  video {
+    display: none;
+  }
+}
+
+.hero__content {
+  margin: 3rem auto 0;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+
+  @include small {
+    max-width: 80%;
+  }
+
+  @include medium-small {
+    max-width: 580px;
+  }
+
+  @include medium {
+    max-width: 720px;
+  }
+
+  @include medium-wide {
+    max-width: 850px;
+  }
+
+  @include wide {
+    margin: 0 auto;
+  }
+
+  @include extrawide {
+    max-width: 1000px;
+  }
+
+  * {
+    color: $white;
+  }
+}
+
+// Navigation height margin
+.hero__content--spacing {
+  margin-top: 50px;
+
+  @include wide {
+    margin-top: 85px;
+  }
+}
+
+.path-frontpage .hero__content--spacing {
+  margin-top: 0;
+}
+
+.node--type-contact {
+  .hero__content--spacing {
+    @include wide {
+      margin-top: 0;
+    }
+  }
+
+  .hero__overlay {
+    display: none;
+  }
+}
+
+.hero__title {
+  @include font-size(24px);
+  margin: 0 0 1rem;
+  padding: 0;
+  font-weight: 700;
+  text-align: center;
+
+  @include medium-small {
+    @include font-size(28px);
+  }
+
+  @include medium-wide {
+    @include font-size(35px);
+    margin: 0 0 1.5rem;
+  }
+
+  @include extrawide {
+    @include font-size(45px);
+  }
+}
+
+.hero__content--has-slogan {
+  padding-top: 60px;
+
+  @include wide {
+    padding-top: 95px;
+  }
+
+  .hero__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.hero__slogan {
+  @include font-size(16px);
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+
+  @include small {
+    @include font-size(18px);
+  }
+
+  @include medium-small {
+    @include font-size(20px);
+    margin: 0 0 1.5rem;
+  }
+
+  @include medium-wide {
+    @include font-size(22px);
+  }
+
+  @include extrawide {
+    @include font-size(30px);
+  }
+}
+
+.hero__text {
+  @include font-size(14px);
+  line-height: 1.5;
+  text-align: center;
+
+  @include medium {
+    @include font-size(16px);
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  @include wide {
+    @include font-size(18px);
+  }
+
+  @include extrawide {
+    @include font-size(20px);
+    max-width: 1000px;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    + p {
+      margin-top: 1rem;
+    }
+  }
+
+  + .button {
+    margin-top: 2rem;
+  }
+
+  .hero__text--text {
+    margin-bottom: 2rem;
+
+    @include medium-small {
+      margin-bottom: 3rem;
+    }
+
+    @include medium-wide {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.hero__slider {
+  background-color: $black-light;
+  width: 100%;
+}
+
+.services-detail {
+  .hero__icon {
+    margin: 0 auto 2rem;
+    max-width: 75px;
+
+    @include medium-wide {
+      max-width: 100px;
+    }
+
+    @include wide {
+      max-width: 125px;
+    }
+  }
+}
+
+.no-hero {
+  margin-top: 6rem;
+
+  @include wide {
+    margin-top: 9rem;
+  }
+}

@@ -1,0 +1,93 @@
+.references-detail__quote {
+  background: $gray-light;
+  padding: 2.5rem 0;
+  margin-bottom: 2.5rem;
+
+  @include medium-small {
+    padding: 3.5rem 0;
+    margin-bottom: 3.5rem;
+  }
+
+  @include medium-wide {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  @include wide {
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+  }
+}
+
+.references-quote__quote,
+.references-quote__quotee .quotee__function {
+  font-weight: 300;
+}
+
+.references-quote__quote {
+  @include font-size(16px);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+
+  @include medium-small {
+    @include font-size(18px);
+    margin-bottom: 2rem;
+  }
+
+  @include medium-wide {
+    @include font-size(20px);
+    margin-bottom: 2.5rem;
+  }
+
+  @include wide {
+    @include font-size(22px);
+    margin-bottom: 3rem;
+  }
+
+  @include extrawide {
+    @include font-size(24px);
+  }
+}
+
+.references-quote__quotee {
+  @include font-size(12px);
+  display: flex;
+  align-items: center;
+
+  @include medium-small {
+    @include font-size(14px);
+  }
+
+  @include medium-wide {
+    @include font-size(16px);
+  }
+
+  @include wide {
+    @include font-size(18px);
+  }
+
+  .quotee__name {
+    font-weight: 600;
+  }
+
+  .quotee__divider,
+  .quotee__function {
+    margin-left: 0.5rem;
+  }
+}
+
+.reference--no-quote {
+  margin-top: 2.5rem;
+
+  @include medium-small {
+    margin-top: 3.5rem;
+  }
+
+  @include medium-wide {
+    margin-top: 4rem;
+  }
+
+  @include wide {
+    margin-top: 5rem;
+  }
+}

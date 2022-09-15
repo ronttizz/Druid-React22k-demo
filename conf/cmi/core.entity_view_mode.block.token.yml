@@ -1,0 +1,10 @@
+uuid: cdfe1321-10fa-4177-8a56-860ff5b14036
+langcode: fi
+status: true
+dependencies:
+  module:
+    - block
+id: block.token
+label: Token
+targetEntityType: block
+cache: true

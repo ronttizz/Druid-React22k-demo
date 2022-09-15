@@ -1,0 +1,25 @@
+uuid: 60509e85-0243-476b-afd9-17e7c32efbd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: listing_teaser_blog
+label: 'Listing teaser blog'
+effects:
+  8f61a642-e232-4071-9bc5-93541e15d6dd:
+    uuid: 8f61a642-e232-4071-9bc5-93541e15d6dd
+    id: image_scale
+    weight: -10
+    data:
+      width: 840
+      height: null
+      upscale: false
+  8a063c01-e76d-4cef-bea7-299a63ebfe09:
+    uuid: 8a063c01-e76d-4cef-bea7-299a63ebfe09
+    id: focal_point_scale_and_crop
+    weight: 3
+    data:
+      width: 840
+      height: 550
+      crop_type: focal_point

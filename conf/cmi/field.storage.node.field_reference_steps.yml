@@ -1,0 +1,19 @@
+uuid: c3ab3c8e-ff11-4463-af00-bd00ef17cca0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_reference_steps
+field_name: field_reference_steps
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

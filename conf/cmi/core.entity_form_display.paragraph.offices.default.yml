@@ -1,0 +1,35 @@
+uuid: 424d7cea-835b-466c-973e-08d6e695929d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_p_offices
+    - paragraphs.paragraphs_type.offices
+  module:
+    - paragraphs
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_p_offices:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

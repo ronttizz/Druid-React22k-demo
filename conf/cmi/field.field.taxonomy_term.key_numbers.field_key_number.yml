@@ -1,0 +1,19 @@
+uuid: a4a9ecb5-7658-49e4-8021-1705be1b03fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_key_number
+    - taxonomy.vocabulary.key_numbers
+id: taxonomy_term.key_numbers.field_key_number
+field_name: field_key_number
+entity_type: taxonomy_term
+bundle: key_numbers
+label: Number
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

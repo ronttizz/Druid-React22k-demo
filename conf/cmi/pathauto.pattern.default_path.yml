@@ -1,0 +1,24 @@
+uuid: dbd3b31a-babd-43bd-8736-54d8991cb89f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: default_path
+label: 'Default path (basic-page/article/contact)'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  eabcde3f-2d1d-475e-9186-90e5f2a751d2:
+    id: node_type
+    negate: false
+    uuid: eabcde3f-2d1d-475e-9186-90e5f2a751d2
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      contact: contact
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

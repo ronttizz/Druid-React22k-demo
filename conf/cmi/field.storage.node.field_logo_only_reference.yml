@@ -1,0 +1,18 @@
+uuid: 7f6f4778-2644-4882-9c06-6ace259740dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_logo_only_reference
+field_name: field_logo_only_reference
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

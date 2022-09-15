@@ -1,0 +1,13 @@
+langcode: fi
+uuid: f2ab43af-516c-4336-9500-a677929512e6
+name: Druid
+mail: contact@druid.fi
+slogan: ''
+page:
+  403: /node/62
+  404: /node/61
+  front: /node/246
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: fi
+mail_notification: ''

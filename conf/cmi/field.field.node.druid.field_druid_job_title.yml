@@ -1,0 +1,21 @@
+uuid: fb861ce7-5d9f-4fac-9800-d19399a6df3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_job_title
+    - node.type.druid
+id: node.druid.field_druid_job_title
+field_name: field_druid_job_title
+entity_type: node
+bundle: druid
+label: 'Job title'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Druid
+default_value_callback: ''
+settings: {  }
+field_type: string

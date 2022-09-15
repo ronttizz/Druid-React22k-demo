@@ -1,0 +1,18 @@
+uuid: 45b7cff3-befe-4ed0-b961-97936ac09882
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:970b82b4-6734-42fb-9c00-e8e67ed4b585'
+name: References
+type: references
+description: 'Customer references displayed on the front page in a slider and also listed in a view.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

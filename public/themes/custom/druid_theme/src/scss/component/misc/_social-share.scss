@@ -1,0 +1,46 @@
+.block--social-share {
+  margin: 3rem 0;
+
+  @include medium-wide {
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.social-share {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(80% + 0.5rem);
+  margin: 0 auto;
+
+  @include medium-wide {
+    flex-direction: column;
+  }
+}
+
+.social-share__item {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0;
+  padding: 0 0.25rem;
+}
+
+.social-share__link {
+  display: block;
+
+  @include medium-wide {
+    left: -5px;
+    position: relative;
+    transition: left 150ms linear;
+
+    &:hover,
+    &:focus {
+      left: 5px;
+    }
+  }
+}

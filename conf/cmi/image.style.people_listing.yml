@@ -1,0 +1,17 @@
+uuid: 60b4996f-d519-4f13-b500-f6216f32d063
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: people_listing
+label: 'People listing'
+effects:
+  f63b89f8-c8b9-49a7-9b25-3b9360e74609:
+    uuid: f63b89f8-c8b9-49a7-9b25-3b9360e74609
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 170
+      height: 170
+      crop_type: focal_point
